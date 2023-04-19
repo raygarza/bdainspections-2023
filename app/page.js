@@ -1,91 +1,14 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
 
-const inter = Inter({ subsets: ['latin'] })
+import React from "react"
 
-export default function Home() {
+
+export default function Homepage() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+  <main>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+     <h1 className='my-10 text-center text-sm font-bold'>Home Page</h1>
+     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae veniam explicabo totam facere quasi! Quas veniam alias placeat? Reprehenderit porro totam eligendi cumque nulla non esse et accusamus quod, facere perspiciatis consequuntur accusantium dolorum? Vitae laborum delectus maxime sequi, aut consequatur pariatur fuga saepe suscipit, ea corporis ullam neque cumque sunt quisquam fugiat nobis odio natus voluptatibus sapiente repellendus dolorum amet facilis veniam! Sequi ut hic excepturi praesentium enim possimus iusto, aliquam doloremque voluptatibus rem ea cumque nemo veritatis officia omnis, a architecto dicta? Fuga perspiciatis aliquam eius quam numquam maiores laudantium consequuntur sit saepe in. Quos incidunt necessitatibus sint nesciunt ipsam odio aperiam illum sunt officia nulla, itaque dicta tempore dolorum at saepe id veniam quam consequatur obcaecati perferendis. Vero voluptatum corporis ipsam. Aliquam sequi sunt dolorum reprehenderit quod. Deserunt alias, culpa nostrum modi commodi praesentium ab eius dolore at accusamus, qui eveniet quas minima eaque consequuntur saepe nihil nulla atque sint officiis fugiat adipisci aut quidem mollitia! Minus mollitia aliquam repellat deserunt doloremque nulla in qui! Necessitatibus ipsam est alias dolor ratione? Numquam natus vero ipsa, tempora id quae dolor, eaque, repellat culpa consectetur eligendi eius! Architecto dolore consectetur fugit voluptatum asperiores magnam quas atque accusantium aliquid? Possimus laudantium, voluptate illo provident corrupti tempora exercitationem velit, quibusdam odio, deserunt error optio delectus cupiditate ipsam officia! Dolor dolores voluptatibus nam, illo earum officiis vel pariatur expedita fugiat maxime asperiores aperiam quaerat sit repellat a explicabo mollitia assumenda molestiae odio facere! Omnis dolorum et ab, unde quasi inventore sit maiores, facilis quis quia asperiores veritatis? Odit nihil beatae delectus ratione veniam temporibus quasi, placeat officia? Quos autem fuga ipsum perspiciatis quisquam dicta, deserunt esse omnis accusantium tenetur delectus repudiandae consectetur cumque sequi ullam sint doloribus ut nisi molestias cum, iusto repellendus, tempora aliquam nemo? Rem doloribus corporis eius facilis quidem debitis consectetur eligendi! Aperiam excepturi praesentium doloremque neque ipsum doloribus iure illum amet sint veniam laborum deleniti eveniet nobis in, animi beatae cupiditate aliquam laboriosam modi. Vitae, nobis. Et necessitatibus earum sint unde officia facere dignissimos quaerat, dolore asperiores. Amet facere magni pariatur similique, vero exercitationem aspernatur nobis, vel, harum tempore illum ea enim voluptates alias dolorum ullam omnis? Repudiandae, voluptatibus error quam laudantium nihil inventore quos adipisci facere numquam, quis veniam quaerat aut voluptatum reiciendis fugit ad possimus esse dicta voluptatem exercitationem commodi sapiente debitis doloremque fugiat? Aliquid facilis ea facere nisi autem? Mollitia tempora maxime, alias amet quos nemo quas commodi sit et incidunt molestias deserunt, modi quam nesciunt est officia qui explicabo unde blanditiis fugiat harum? Maxime necessitatibus libero officiis sed, ipsum fugit repellat quos amet labore, aspernatur placeat quia veniam quisquam quam excepturi, ad eum nesciunt reprehenderit a non nam nobis voluptas dicta. Amet sit minus, vero similique laudantium dolorem rerum illum corporis. Natus odit vel est veniam quas ab voluptatem officia cumque. Deserunt officiis nostrum nobis. Dolore quisquam omnis voluptates eius enim, voluptatum id! Vel magni dicta, vitae optio culpa quas veniam placeat voluptatum repudiandae dolores saepe quo sed nesciunt, possimus, nisi esse quasi temporibus.</p>
+      </main>
   )
 }
