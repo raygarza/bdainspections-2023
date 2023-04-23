@@ -13,12 +13,9 @@ export default function NavbarPill() {
 			className='relative inline-block text-left'
 		>
 			<div>
-				<Menu.Button className='inline-flex w-full justify-center gap-x-1.5 rounded-full bg-[#72363915] bg-opacity-60 hover:bg-opacity-100 items-center text-[#723639] px-2.5 py-1.5 text-xs font-semibold  shadow-sm   duration-300'>
-					Info
-					<ChevronDownIcon
-						className='-mr-1 h-3.5 w-3.5 text-[#723639]'
-						aria-hidden='true'
-					/>
+				<Menu.Button className='inline-flex w-full justify-center gap-x-1.5 rounded-full bg-[#494f3710] bg-opacity-40 hover:bg-opacity-100 items-center text-[#434639] px-3 py-2.5 text-sm sm:text-sm font-semibold  shadow-sm   duration-300'>
+					BDA Inspections
+					
 				</Menu.Button>
 			</div>
 

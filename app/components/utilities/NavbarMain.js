@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 import Link from 'next/link';
-import NavbarPill from './NavbarPill';
+// import NavbarPill from './NavbarPill';
 import { Fragment } from 'react';
 import {
 	Disclosure,
@@ -13,6 +13,8 @@ import {
 	Popover,
 } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
+import logo from "../../../public/img/brand/bda-logolight.svg"
 
 function classNames(...classes) {
 	return classes.filter(Boolean).join(' ');
@@ -29,22 +31,25 @@ export default function NavbarMain() {
 	};
 
 	return (
-		<div>
-			<nav>
-				<div className='mx-auto max-w-7xl px-4 sm:px-6 lg:px-8'>
-					<div className='flex h-20 justify-between'>
+		
+			<nav className='bg-white'>
+				<div className='mx-auto max-w-7xl px-4 py-2 sm:px-6 lg:px-8 '>
+					<div className='flex h-12 sm:h-16 justify-between'>
 						{/* left side of nav */}
 						<div className='flex'>
 							{/* logo - desktop and mobile version */}
 
 							<div className='flex space-x-4 items-center'>
 								<Link href='/'>
-									<div className='flex sm:space-x-8'>
-										{/* Logo Goes Here */}
-										<div className='my-auto font-semibold text-xl'>BDA Inspections</div>
+									<div className='flex space-x-2 items-center'>
+										<Image  src={logo} width={80}
+										 />
+										 <div>|</div>
+											
+										<div className='my-auto font-semibold text-lg sm:text-xl'>Lake Charles</div>
 									</div>
 								</Link>
-								<NavbarPill />
+								
 							</div>
 						</div>
 
@@ -52,29 +57,29 @@ export default function NavbarMain() {
 						{/* Nav Links */}
 						<div className='hidden sm:ml-6 sm:flex sm:space-x-6 items-center'>
 							<Link
-								href='/states'
-								className='inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-600 hover:text-[#653033] '
+								href='/blog'
+								className='inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-[#653033] '
 							>
 								Blog
 							</Link>
 
 							<Link
-								href='/cities'
-								className='inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-600 hover:text-[#653033] '
+								href='#cities'
+								className='inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-[#653033] '
 							>
 								About
 							</Link>
 
 							<Link
-								href='/cities'
-								className='inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-600 hover:text-[#653033] '
+								href='#team'
+								className='inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-[#653033] '
 							>
 								Team
 							</Link>
 
 							<Link
-								href='/cities'
-								className='inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-600 hover:text-[#653033] '
+								href='#services'
+								className='inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-[#653033] '
 							>
 								Services
 							</Link>
@@ -197,6 +202,6 @@ export default function NavbarMain() {
 					</div>
 				</div>
 			</nav>
-		</div>
+		
 	);
 }

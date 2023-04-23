@@ -2,6 +2,7 @@ import './globals.css'
 import NavbarMain from './components/utilities/NavbarMain';
 import Footer from './components/utilities/Footer';
 import Banner from './components/utilities/Banner';
+import AlertBanner from './components/utilities/AlertBanner';
 
 export const metadata = {
 	title: "BDA Inspections | Lake Charles",
@@ -25,9 +26,11 @@ export default function RootLayout({ children }) {
       />
       </head>
       <body>
-				<div>
-					<Banner />
+				<div className=''>
+				 <Banner />
 					<NavbarMain />
+					<AlertBanner/>
+         
 				</div>
 				{children}
 				<div className=' border-t border-[#723639] '>

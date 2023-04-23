@@ -1,14 +1,34 @@
 
 import React from "react"
-
+import Hero from "./components/home/Hero"
+import CustomerService from "./components/home/CustomerService"
+import Services from "./components/home/Services"
+import GreenReviews from "./components/home/GreenReviews"
 
 export default function Homepage() {
   return (
-  <main>
+    <main>
+      <Hero/>
+      <div
+        className="absolute inset-x-50 top-1/2 -z-10 -translate-y-1/2 transform-gpu overflow-hidden opacity-30 blur-3xl"
+        aria-hidden="true"
+      >
+        <div
+          className="ml-[max(50%,38rem)] aspect-[1313/771] w-[82.0625rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc]"
+          style={{
+            clipPath:
+              'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+          }}
+        />
+      </div>
+  
+      
+      <CustomerService/>
+      {/* <GreenReviews/> */}
 
-
-     <h1 className='my-10 text-center text-sm font-bold'>Home Page</h1>
-     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae veniam explicabo totam facere quasi! Quas veniam alias placeat? Reprehenderit porro totam eligendi cumque nulla non esse et accusamus quod, facere perspiciatis consequuntur accusantium dolorum? Vitae laborum delectus maxime sequi, aut consequatur pariatur fuga saepe suscipit, ea corporis ullam neque cumque sunt quisquam fugiat nobis odio natus voluptatibus sapiente repellendus dolorum amet facilis veniam! Sequi ut hic excepturi praesentium enim possimus iusto, aliquam doloremque voluptatibus rem ea cumque nemo veritatis officia omnis, a architecto dicta? Fuga perspiciatis aliquam eius quam numquam maiores laudantium consequuntur sit saepe in. Quos incidunt necessitatibus sint nesciunt ipsam odio aperiam illum sunt officia nulla, itaque dicta tempore dolorum at saepe id veniam quam consequatur obcaecati perferendis. Vero voluptatum corporis ipsam. Aliquam sequi sunt dolorum reprehenderit quod. Deserunt alias, culpa nostrum modi commodi praesentium ab eius dolore at accusamus, qui eveniet quas minima eaque consequuntur saepe nihil nulla atque sint officiis fugiat adipisci aut quidem mollitia! Minus mollitia aliquam repellat deserunt doloremque nulla in qui! Necessitatibus ipsam est alias dolor ratione? Numquam natus vero ipsa, tempora id quae dolor, eaque, repellat culpa consectetur eligendi eius! Architecto dolore consectetur fugit voluptatum asperiores magnam quas atque accusantium aliquid? Possimus laudantium, voluptate illo provident corrupti tempora exercitationem velit, quibusdam odio, deserunt error optio delectus cupiditate ipsam officia! Dolor dolores voluptatibus nam, illo earum officiis vel pariatur expedita fugiat maxime asperiores aperiam quaerat sit repellat a explicabo mollitia assumenda molestiae odio facere! Omnis dolorum et ab, unde quasi inventore sit maiores, facilis quis quia asperiores veritatis? Odit nihil beatae delectus ratione veniam temporibus quasi, placeat officia? Quos autem fuga ipsum perspiciatis quisquam dicta, deserunt esse omnis accusantium tenetur delectus repudiandae consectetur cumque sequi ullam sint doloribus ut nisi molestias cum, iusto repellendus, tempora aliquam nemo? Rem doloribus corporis eius facilis quidem debitis consectetur eligendi! Aperiam excepturi praesentium doloremque neque ipsum doloribus iure illum amet sint veniam laborum deleniti eveniet nobis in, animi beatae cupiditate aliquam laboriosam modi. Vitae, nobis. Et necessitatibus earum sint unde officia facere dignissimos quaerat, dolore asperiores. Amet facere magni pariatur similique, vero exercitationem aspernatur nobis, vel, harum tempore illum ea enim voluptates alias dolorum ullam omnis? Repudiandae, voluptatibus error quam laudantium nihil inventore quos adipisci facere numquam, quis veniam quaerat aut voluptatum reiciendis fugit ad possimus esse dicta voluptatem exercitationem commodi sapiente debitis doloremque fugiat? Aliquid facilis ea facere nisi autem? Mollitia tempora maxime, alias amet quos nemo quas commodi sit et incidunt molestias deserunt, modi quam nesciunt est officia qui explicabo unde blanditiis fugiat harum? Maxime necessitatibus libero officiis sed, ipsum fugit repellat quos amet labore, aspernatur placeat quia veniam quisquam quam excepturi, ad eum nesciunt reprehenderit a non nam nobis voluptas dicta. Amet sit minus, vero similique laudantium dolorem rerum illum corporis. Natus odit vel est veniam quas ab voluptatem officia cumque. Deserunt officiis nostrum nobis. Dolore quisquam omnis voluptates eius enim, voluptatum id! Vel magni dicta, vitae optio culpa quas veniam placeat voluptatum repudiandae dolores saepe quo sed nesciunt, possimus, nisi esse quasi temporibus.</p>
-      </main>
+      <Services/>
+      {/* <GreenReviews/> */}
+    </main>
+      
   )
 }
