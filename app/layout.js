@@ -29,11 +29,11 @@ export default function RootLayout({ children }) {
 				<div className=''>
 				 <Banner />
 					<NavbarMain />
-					<AlertBanner/>
+					{/* <AlertBanner/> */}
          
 				</div>
 				{children}
-				<div className=' border-t border-[#723639] '>
+				<div className='bg-white border-t '>
 					<div className='mx-auto max-w-7xl px-6 pb-8 py-6'>
 						<Footer />
 					</div>

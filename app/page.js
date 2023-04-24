@@ -24,10 +24,9 @@ export default function Homepage() {
   
       
       <CustomerService/>
-      {/* <GreenReviews/> */}
 
       <Services/>
-      {/* <GreenReviews/> */}
+      <GreenReviews/>
     </main>
       
   )

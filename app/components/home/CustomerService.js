@@ -53,9 +53,9 @@ export default function Example() {
     <div className="bg-white py-10 md:py-16 lg:py-20">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
         
-        <div className="mx-auto max-w-2xl lg:mx-0 sticky top-40">
+        <div className="mx-auto max-w-2xl lg:mx-0 ">
           
-          <h2 className="text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl">Customer Service is Our Priority</h2>
+          <h2 className="text-xl sm:text-3xl font-bold tracking-tight text-gray-800 ">Customer Service is Our Priority</h2>
           <div className='py-1 bg-[#434639] w-20 mt-2 '></div>
           <p className="mt-6 text-lg leading-8 text-gray-600">
           Each of our team members is a Licensed Home Inspector, and passes the litmus test of professionalism, attention to detail, and all-around customer service that our company strives to deliver to each and every customer.
