@@ -33,7 +33,7 @@ export default function NavbarMain() {
 	return (
 		
 			<nav className='bg-white'>
-				<div className='mx-auto max-w-7xl px-4 py-2 sm:px-6 lg:px-8 '>
+				<div className='mx-auto max-w-[100rem] px-4 py-2 sm:px-6 lg:px-8 '>
 					<div className='flex h-12 sm:h-16 justify-between'>
 						{/* left side of nav */}
 						<div className='flex'>

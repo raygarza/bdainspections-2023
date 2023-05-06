@@ -167,67 +167,87 @@ export default function BlogArticlesFilter(){
 
 
   return(
-    <div className='grid grid-cols-8 m-auto py-10 sm:space-x-6'>
+    <div className='grid grid-cols-8 m-auto sm:py-10 sm:space-x-6'>
       <div className='col-span-8 lg:col-span-2'>
-          <div className=" bg-white rounded-xl shadow-lg space-y-4 p-6">
+          <div className=" hidden lg:block bg-white rounded-lg sm:rounded-xl divide-y-2 shadow-lg space-y-2 p-6 sticky top-10">
           
-              <label className="text-base font-semibold text-gray-900 border-b-2">Filter Articles</label>
-              <fieldset >
-                <legend className="sr-only">Notification method</legend>
-                <div className="space-y-2">
-                  {notificationMethods.map((notificationMethod) => (
-                    <div key={notificationMethod.id} className="flex items-center">
-                      <input
-                        id={notificationMethod.id}
-                        name="notification-method"
-                        type="radio"
-                        defaultChecked={notificationMethod.id === 'all'}
-                        className="h-4 w-4 border-gray-300 text-[#6c705d] focus:ring-[#6c705d00]"
-                      />
-                      <label htmlFor={notificationMethod.id} className="ml-3 block text-sm font-medium leading-6 text-gray-900">
-                        {notificationMethod.title}
-                      </label>
-                    </div>
-                  ))}
-                </div>
-              </fieldset>
+              <div className="text-2xl font-bold text-gray-900 ">Filter By</div>
+              <div className='pt-4'>
+                <div className='font-bold pb-2.5'>Topic</div>
+                <fieldset  className=''>
+                  <legend className="sr-only">Notification method</legend>
+                  <div className="space-y-2">
+                    {notificationMethods.map((notificationMethod) => (
+                      <div key={notificationMethod.id} className="flex items-center">
+                        <input
+                          id={notificationMethod.id}
+                          name="notification-method"
+                          type="radio"
+                          defaultChecked={notificationMethod.id === 'all'}
+                          className="h-4 w-4 border-gray-300 text-[#6c705d] focus:ring-[#6c705d00]"
+                        />
+                        <label htmlFor={notificationMethod.id} className="ml-3 block text-sm font-medium leading-6 text-gray-900">
+                          {notificationMethod.title}
+                        </label>
+                      </div>
+                    ))}
+                  </div>
+                </fieldset>
+              </div>
+              
           
           </div>
       </div>
       <div className='col-span-8 lg:col-span-6'>
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className='pb-6'>
-            <h1 className='text-lg font-bold'>All Articles</h1>
-            <p className='w-8 border-t-4 border-[#6c705d]'></p>
+        <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className='pb-6 '>
+           
+            <h1 className='text-2xl lg:text-2xl pb-1 font-bold lg:font-extrabold'>Latest Articles</h1>
+            <p className='w-12 border-t-[6px]  border-[#6c705d]'></p>
+
+            <div className='mt-4 lg:hidden'>
+                <select
+                  id="location"
+                  name="location"
+                  className="mt-2 block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-[#494f37] sm:text-sm sm:leading-6"
+                  defaultValue="All"
+                >
+                  <option>All</option>
+                  <option>Market Trends</option>
+                  <option>How-To's</option>
+                </select>
+              </div>
           </div>
           
-          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-6 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
             {posts.map((post) => (
-              <article key={post.id} className="flex flex-col items-start justify-between">
+              <article key={post.id} className="flex flex-col items-start justify-between ring-1 ring-gray-500/20 bg-white rounded-lg sm:rounded-2xl">
                 <div className="relative w-full">
                   <img
                     src={post.imageUrl}
                     alt=""
-                    className="aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover "
+                    className="aspect-[16/9] w-full rounded-t-lg sm:rounded-t-2xl bg-gray-100 object-cover "
                   />
                   <div className="absolute inset-0 rounded-2xl " />
                 </div>
-                <div className="max-w-xl">
-                  <span className="inline-flex items-center rounded-full bg-blue-100/50 px-2 py-1 mt-2 mb-2 text-[10px] font-medium text-blue-500">
+                <div className="max-w-xl px-4 pb-4">
+                  <span className="inline-flex items-center rounded-full bg-green-300/20 px-2 py-1 my-3 sm:mt-2 sm:mb-1 text-xs sm:text-[10px] font-normal text-green-700">
                   {post.category.title}
                   </span>
                   <div className="group relative">
-                    <h3 className="mt-1 text-base font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
+                    <h3 className="text-lg line-clamp-2 sm:text-sm font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
                       <a href={post.href}>
                         <span className="absolute inset-0" />
                         {post.title}
                       </a>
                     </h3>
-                    <p className="mt-2 line-clamp-3 text-sm leading-6 text-gray-600">{post.description}</p>
+                    <p className='text-sm sm:text-[10px] text-gray-500'>5 min. read</p>
+                    <p className="mt-2 line-clamp-3 sm:text-xs sm:leading-2 text-gray-600">{post.description}</p>
+                    <div className='text-blue-500 hover:text-blue-800 duration-200 text-xs my-2'>Read More {'>'}</div>
                   </div>
-                  <div className="relative mt-4 flex items-center gap-x-4">
-                    <img src={post.author.imageUrl} alt="" className="h-8 w-8 rounded-full bg-gray-100" />
-                    <div className="text-xs leading-2">
+                  <div className="relative sm:mt-4 my-4 flex items-center gap-x-3">
+                    <img src={post.author.imageUrl} alt="" className="h-8 sm:h-7 w-8 sm:w-7 rounded-full bg-gray-100" />
+                    <div className="text-sm sm:text-[10px] ">
                       <p className="font-semibold text-gray-900">
                         <a href={post.author.href}>
                           <span className="absolute inset-0" />

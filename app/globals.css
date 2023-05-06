@@ -19,3 +19,11 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+
+
+
+.blog-header{
+	background-image: url('../public/img/layout/blog-header-background.jpg');
+	background-repeat: no-repeat;
+	background-size:cover;
+}

@@ -70,7 +70,7 @@ export default function Banner() {
 	return (
 		<div className='bg-[#434639]'>
 			
-			<div className="mx-auto max-w-7xl px-6 py-3 md:flex md:items-center md:justify-between lg:px-8">
+			<div className="mx-auto max-w-[100rem] px-6 py-3 md:flex md:items-center md:justify-between lg:px-8">
 				<div className="flex sm:justify-center space-x-4 md:order-2">
 				{navigation.map((item) => (
 					<a key={item.name} href={item.href} className="text-white hover:text-white">

@@ -13,7 +13,7 @@ export default function NavbarPill() {
 			className='relative inline-block text-left'
 		>
 			<div>
-				<Menu.Button className='inline-flex w-full justify-center gap-x-1.5 rounded-full bg-[#494f3710] bg-opacity-40 hover:bg-opacity-100 items-center text-[#434639] px-3 py-2.5 text-sm sm:text-sm font-semibold  shadow-sm   duration-300'>
+				<Menu.Button className='inline-flex w-full justify-center gap-x-1.5 rounded-full bg-[#494f3710] bg-opacity-40 hover:bg-opacity-100 items-center text-[#434639] px-3 py-2.5 text-xs sm:text-sm font-semibold  shadow-sm   duration-300'>
 					BDA Inspections
 					
 				</Menu.Button>
