@@ -255,7 +255,7 @@ export default async function BlogArticlesFilter(){
                     return({API_URL} + writerArray[x].attributes.picture.data.attributes.url)
                   } 
                   console.log('writerArray[x].attributes.name: ', writerArray[x].attributes.name)
-                  console.log('article.attributes.author.data.attributes.name: ', article.attributes.author.data.attributes.name)
+                  console.log('article.attributes.author.data.attributes.name: ', article.attributes.author.data.attributes.name.slice(1))
 
                  }
                 }
