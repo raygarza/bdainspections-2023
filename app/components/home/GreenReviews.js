@@ -28,7 +28,7 @@ export default function GreenReviews() {
                   <img
                     className="h-14 w-14 rounded-full bg-gray-800"
                     src="https://lh3.googleusercontent.com/a-/ACB-R5Txn7STXGXnM_VavoGuciISt7BT1TERm9P-OW-O=w60-h60-p-rp-mo-br100"
-                    alt=""
+                    alt="image"
                   />
                   <div className="text-base">
                     <div className="font-semibold text-white">Magdalene Dugas</div>
@@ -60,7 +60,7 @@ export default function GreenReviews() {
                   <img
                     className="h-14 w-14 rounded-full bg-gray-800"
                     src="https://lh3.googleusercontent.com/a-/ACB-R5RivC-85Bzx_cEw4bV2dgUkq6L5e_p4qUxtPHDMIQ=w60-h60-p-rp-mo-ba4-br100"
-                    alt=""
+                    alt="image"
                   />
                   <div className="text-base">
                     <div className="font-semibold text-white">Ty Royer</div>

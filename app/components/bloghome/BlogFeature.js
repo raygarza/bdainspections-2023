@@ -33,7 +33,7 @@ export default function BlogFeature() {
                 <img
                 className=" w-full flex-none rounded-2xl object-cover shadow-xl aspect-5/4 h-48 lg:max-w-sm"
                 src="https://images.unsplash.com/photo-1519338381761-c7523edc1f46?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
-                alt=""
+                alt="image"
                 />
             </div>
           </div>

@@ -1,5 +1,5 @@
+import { API_URL } from '@/config'
 import Image from 'next/image'
-
 import chrisheadshot from '../../../public/img/headshots/chris.svg'
 import davidheadshot from '../../../public/img/headshots/david.svg'
 import delmaheadshot from '../../../public/img/headshots/delma.svg'
@@ -44,7 +44,10 @@ const people = [
 ]
 
 
-export default function CustomerService() {
+export default async function CustomerService() {
+  const data = await fetch(`${API_URL}api/writers?populate=*`);
+  const writers = await data.json();
+
   return (
     <div className="bg-white py-10 md:py-16 lg:py-20">
       <div className="mx-auto grid max-w-[100rem] grid-cols-1 gap-x-8 gap-y-10 px-6 lg:px-8 xl:grid-cols-3">
@@ -61,29 +64,25 @@ export default function CustomerService() {
         </div>
         
         <ul
-          role="list"
+          
           className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-2"
         >
-          {people.map((person) => (
-            <li key={person.name}>
-              <Image className="aspect-[3/2] w-full rounded-2xl object-cover" src={person.imageUrl} width='50' alt="" />
+          {writers.data.map((person) => (
+ 
+            <li key={person.id} >
+              <Image className="aspect-[3/2] w-full rounded-2xl object-cover" src={`${API_URL}` + person.attributes.picture.data.attributes.url.slice(1)} alt='image' width='50' height='34' />
               <div className='space-x-2 my-2 absolute -mt-[2.5rem] ml-2 '>
-                  {person.trec !== '' ?   (<span className="inline-flex items-center rounded-lg bg-gray-50 px-2 py-1 text-xs bg-opacity-80 font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">TREC# {person.trec}</span>) : ''}
+                  {person.attributes.trec_number !== null ?   (<span className="inline-flex items-center rounded-lg bg-gray-50 px-2 py-1 text-xs bg-opacity-80 font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">TREC# {person.attributes.trec_number}</span>) : ''}
              
-              {person.lhi !== '' ?  <span className="inline-flex items-center rounded-lg bg-gray-50 px-2 py-1 text-xs bg-opacity-80 font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">LHI# {person.lhi}</span> : ''}
+              {person.attributes.lhi_number !== null ?  <span className="inline-flex items-center rounded-lg bg-gray-50 px-2 py-1 text-xs bg-opacity-80 font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">LHI# {person.attributes.lhi_number}</span> : ''}
 
              </div>
-              <h3 className="mt-2 sm:mt-4 text-lg font-semibold leading-8 text-gray-900">{person.name}</h3>
-              <p className="text-sm leading-2 text-gray-600">{person.role}</p>
-              {person.bio !== '' ? <p className="mt-4 text-base leading-7 text-gray-600">{person.bio}</p> : ''}
+              <h3 className="mt-2 sm:mt-4 text-lg font-semibold leading-8 text-gray-900">{person.attributes.name}</h3>
+              <p className="text-sm leading-2 text-gray-600">{person.attributes.job_title}</p>
+              {/* {person.bio !== '' ? <p className="mt-4 text-base leading-7 text-gray-600">{person.bio}</p> : ''} */}
 
-              
-             
-            
-          
-        
-             
             </li>
+
           ))}
         </ul>
 
