@@ -1,4 +1,5 @@
 import { StarIcon } from '@heroicons/react/20/solid'
+import Image from 'next/image'
 
 export default function GreenReviews() {
     return (
@@ -14,7 +15,7 @@ export default function GreenReviews() {
               <StarIcon className="h-5 w-5 shadow-lg flex-none" aria-hidden="true" />
               <StarIcon className="h-5 w-5 shadow-lg flex-none" aria-hidden="true" />
             </div>
-            <div className='font-bold text-xs mt-2 text-white'>Positive: <span className='opacity-50 font-extralight pl-1'>Professionalism, Responsiveness</span></div>
+            <div className='font-bold text-sm mt-2 text-white'>Positive: <span className='opacity-50 font-extralight pl-1'>Professionalism, Responsiveness</span></div>
               <figure className="mt-10 flex flex-auto flex-col justify-between">
                 <blockquote className="text-lg leading-8 text-white">
                   <p>
@@ -25,10 +26,13 @@ export default function GreenReviews() {
                   </p>
                 </blockquote>
                 <figcaption className="mt-10 flex items-center gap-x-6">
-                  <img
+                  <Image
                     className="h-14 w-14 rounded-full bg-gray-800"
-                    src="https://lh3.googleusercontent.com/a-/ACB-R5Txn7STXGXnM_VavoGuciISt7BT1TERm9P-OW-O=w60-h60-p-rp-mo-br100"
+                    src="https://lh3.googleusercontent.com/a-/ACB-R5Txn7STXGXnM_VavoGuciISt7BT1TERm9P-OW-O"
                     alt="image"
+                    quality={100}
+                    width={60}
+                    height={60}
                   />
                   <div className="text-base">
                     <div className="font-semibold text-white">Magdalene Dugas</div>
@@ -46,7 +50,7 @@ export default function GreenReviews() {
               <StarIcon className="h-5 w-5 shadow-lg flex-none" aria-hidden="true" />
               <StarIcon className="h-5 w-5 shadow-lg flex-none" aria-hidden="true" />
             </div>
-            <div className='font-bold text-xs mt-2 text-white'>Positive: <span className='opacity-50 font-extralight pl-1'>Professionalism, Quality, Responsiveness</span></div>
+            <div className='font-bold text-sm mt-2 text-white'>Positive: <span className='opacity-50 font-extralight pl-1'>Professionalism, Quality, Responsiveness</span></div>
 
               <figure className="mt-10 flex flex-auto flex-col justify-between">
                 <blockquote className="text-lg leading-8 text-white">
@@ -57,10 +61,14 @@ export default function GreenReviews() {
                   </p>
                 </blockquote>
                 <figcaption className="mt-10 flex items-center gap-x-6">
-                  <img
+                 
+                   <Image
                     className="h-14 w-14 rounded-full bg-gray-800"
-                    src="https://lh3.googleusercontent.com/a-/ACB-R5RivC-85Bzx_cEw4bV2dgUkq6L5e_p4qUxtPHDMIQ=w60-h60-p-rp-mo-ba4-br100"
+                    src="https://lh3.googleusercontent.com/a-/ACB-R5RivC-85Bzx_cEw4bV2dgUkq6L5e_p4qUxtPHDMIQ"
                     alt="image"
+                    quality={100}
+                    width={60}
+                    height={60}
                   />
                   <div className="text-base">
                     <div className="font-semibold text-white">Ty Royer</div>

@@ -250,12 +250,13 @@ export default async function BlogArticlesFilter(){
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-4 gap-y-6 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
             {articles.data.map((article) => {  
               function writerAvatar(){  
+
                 for(const x in writerArray) {
                   if (writerArray[x].attributes.name === article.attributes.author.data.attributes.name){
-                    return({API_URL} + writerArray[x].attributes.picture.data.attributes.url)
+                    return(`${API_URL}` + writerArray[x].attributes.picture.data.attributes.url)
                   } 
                   console.log('writerArray[x].attributes.name: ', writerArray[x].attributes.name)
-                  console.log('article.attributes.author.data.attributes.name: ', article.attributes.author.data.attributes.name.slice(1))
+                  console.log('article.attributes.author.data.attributes.name: ', article.attributes.author.data.attributes.name)
 
                  }
                 }
@@ -266,14 +267,14 @@ export default async function BlogArticlesFilter(){
               <article key={article.id} className="flex flex-col items-start justify-between ring-1 ring-gray-500/20 bg-white rounded-lg sm:rounded-2xl">
                 <div className="relative w-full">
                   <img
-                    src={{API_URL} + article.attributes.image.data.attributes.formats.thumbnail.url}
+                    src={`${API_URL}` + article.attributes.image.data.attributes.formats.thumbnail.url}
                     alt="image"
                     className="aspect-[16/9] w-full rounded-t-lg sm:rounded-t-2xl bg-gray-100 object-cover "
                   />
                   <div className="absolute inset-0 rounded-2xl " />
                 </div>
                 <div className="max-w-xl px-4 pb-4 space-y-2">
-                  <span className="inline-flex items-center rounded-full bg-gray-300/30 px-2 py-1 my-3 sm:mt-3 sm:mb-1 text-xs sm:text-[10px] font-normal text-gray-700">
+                  <span className="inline-flex items-center rounded-full bg-gray-200 px-2 py-1 my-3 sm:mt-3 sm:mb-1 text-xs sm:text-[10px] font-normal text-gray-700">
                   {article.attributes.category.data.attributes.name}
                   </span>
                   <div className="group relative my-2">
@@ -293,9 +294,10 @@ export default async function BlogArticlesFilter(){
                       <div>
                         <img
                           className="inline-block h-10 w-10 rounded-full"
-                          src={writerAvatar()}
+                          src={'writerAvatar()'}
                           alt="writer avatar"
                         />
+                        
                       </div>
                       <div className="ml-3">
                         <p className="text-xs font-medium text-gray-700 group-hover:text-gray-900">{article.attributes.author.data.attributes.name}</p>
