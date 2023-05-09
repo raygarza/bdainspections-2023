@@ -5,17 +5,13 @@ import Link from "next/link";
 const API_URL = "https://bdainspections-2023.herokuapp.com"
 
 async function getArticles() {
-  const res = await fetch(`${API_URL}/api/articles?populate=*`, { cache: 'no-store' });
+  const res = await fetch(`${API_URL}/api/articles?populate=*`);
   return res.json();
 }
  
-async function getWriters() {
-  const res =  await fetch(`${API_URL}/api/writers?populate=*`, { cache: 'no-store' });
-  return res.json();
-}
 
 async function getCategories() {
-  const res = await fetch(`${API_URL}/api/categories`, { cache: 'no-store' });
+  const res = await fetch(`${API_URL}/api/categories`);
   return res.json();
 }
 
@@ -27,12 +23,16 @@ export default async function BlogArticlesFilter(){
   
 
   const articlesData = getArticles();
-  const writersData = getWriters();
+  
   const categoriesData = getCategories();
 
   // Wait for the promises to resolve
-  const [articles, writers, categories] = await Promise.all([articlesData, writersData, categoriesData]);
+  const [articles,  categories] = await Promise.all([articlesData, categoriesData]);
  
+
+  const data = await fetch(`${API_URL}/api/writers?populate=*`, { cache: 'no-store' });
+  const writersObject = await data.json();
+  const writers = writersObject.data;
   const writerArray = writers.data
 
 
