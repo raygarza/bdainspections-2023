@@ -267,7 +267,7 @@ export default async function BlogArticlesFilter(){
               <article key={article.id} className="flex flex-col items-start justify-between ring-1 ring-gray-500/20 bg-white rounded-lg sm:rounded-2xl">
                 <div className="relative w-full">
                   <img
-                    src={`${API_URL}` + article.attributes.image.data.attributes.formats.thumbnail.url.slice(1)}
+                    src={article.attributes.image.data.attributes.formats.thumbnail.url}
                     alt="image"
                     className="aspect-[16/9] w-full rounded-t-lg sm:rounded-t-2xl bg-gray-100 object-cover "
                   />

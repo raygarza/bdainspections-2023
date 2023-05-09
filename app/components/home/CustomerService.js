@@ -31,7 +31,7 @@ export default async function CustomerService() {
           {writers.map((person) => (
  
             <li key={person.id} >
-              <Image className="aspect-[3/2] w-full rounded-2xl object-cover" src={API_URL + person.attributes.picture.data.attributes.url.slice(1)} alt='image' width='50' height='34' />
+              <Image className="aspect-[3/2] w-full rounded-2xl object-cover" src={person.attributes.picture.data.attributes.url} alt='image' width='50' height='34' />
               <div className='space-x-2 my-2 absolute -mt-[2.5rem] ml-2 '>
                   {person.attributes.trec_number !== null ?   (<span className="inline-flex items-center rounded-lg bg-gray-50 px-2 py-1 text-xs bg-opacity-80 font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">TREC# {person.attributes.trec_number}</span>) : ''}
              
