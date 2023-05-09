@@ -166,17 +166,17 @@ import { API_URL } from "@/config";
 
 
 async function getArticles() {
-  const res = await fetch(`${API_URL}/api/articles?populate=*`, { next: { revalidate: 10 }});
+  const res = await fetch(`${API_URL}/api/articles?populate=*`);
   return res.json();
 }
  
 async function getWriters() {
-  const res =  await fetch(`${API_URL}/api/writers?populate=*`, { next: { revalidate: 10 }});
+  const res =  await fetch(`${API_URL}/api/writers?populate=*`);
   return res.json();
 }
 
 async function getCategories() {
-  const res = await fetch(`${API_URL}/api/categories`, { next: { revalidate: 10 }});
+  const res = await fetch(`${API_URL}/api/categories`);
   return res.json();
 }
 
@@ -187,12 +187,12 @@ async function getCategories() {
 export default async function BlogArticlesFilter(){
   
 
-  const articles = getArticles();
-  const writers = getWriters();
-  const categories = getCategories();
+  const articlesData = getArticles();
+  const writersData = getWriters();
+  const categoriesData = getCategories();
 
   // Wait for the promises to resolve
-  const [artist, albums] = await Promise.all([articles, writers, categories]);
+  const [articles, writers, categories] = await Promise.all([articlesData, writersData, categoriesData]);
  
   const writerArray = writers.data
 
