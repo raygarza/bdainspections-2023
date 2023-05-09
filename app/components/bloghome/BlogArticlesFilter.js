@@ -23,7 +23,6 @@ export default async function BlogArticlesFilter(){
   
 
   const articlesData = getArticles();
-  
   const categoriesData = getCategories();
 
   // Wait for the promises to resolve
