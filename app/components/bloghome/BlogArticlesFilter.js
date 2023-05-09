@@ -22,10 +22,10 @@ import { API_URL } from "@/config";
 export default async function BlogArticlesFilter(){
   
   const articlesRes = await fetch(`${API_URL}/api/writers?populate=*`, { next: { revalidate: 60 } });
-  const articles = await data.json();
+  const articles = await articlesRes.json();
 
   const categoriesRes = await fetch(`${API_URL}/api/writers?populate=*`, { next: { revalidate: 60 } });
-  const categories = await data.json();
+  const categories = await categoriesRes.json();
 
 
   const data = await fetch(`${API_URL}/api/writers?populate=*`, { next: { revalidate: 60 } });
