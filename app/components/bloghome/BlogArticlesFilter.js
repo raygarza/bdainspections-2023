@@ -166,17 +166,17 @@ import { API_URL } from "@/config";
 
 
 async function getArticles() {
-  const res = await fetch(`${API_URL}/api/articles?populate=*`);
+  const res = await fetch(`${API_URL}/api/articles?populate=*`, { next: { revalidate: 10 }});
   return res.json();
 }
  
 async function getWriters() {
-  const res =  await fetch(`${API_URL}/api/writers?populate=*`);
+  const res =  await fetch(`${API_URL}/api/writers?populate=*`, { next: { revalidate: 10 }});
   return res.json();
 }
 
 async function getCategories() {
-  const res = await fetch(`${API_URL}/api/categories`);
+  const res = await fetch(`${API_URL}/api/categories`, { next: { revalidate: 10 }});
   return res.json();
 }
 
