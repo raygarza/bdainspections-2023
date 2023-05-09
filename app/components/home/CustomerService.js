@@ -1,52 +1,13 @@
 import { API_URL } from '@/config'
 import Image from 'next/image'
-import chrisheadshot from '../../../public/img/headshots/chris.svg'
-import davidheadshot from '../../../public/img/headshots/david.svg'
-import delmaheadshot from '../../../public/img/headshots/delma.svg'
-import jaseheadshot from '../../../public/img/headshots/jase.svg'
 
-
-
-const people = [
-  {
-    name: 'Chris McNamee',
-    role: 'Owner / Operator',
-    imageUrl:chrisheadshot,
-    trec:'22293',
-    lhi: '11020'
-
-  },
-  {
-    name: 'David Marcantel',
-    role: 'Licensed Inspector',
-    imageUrl:davidheadshot,
-    trec:'',
-    lhi: '11038'
-
-  },
-  {
-    name: 'Delma Troy Clark',
-    role: 'Licensed Inspector',
-    imageUrl:delmaheadshot,
-    trec:'',
-    lhi: '11706'
-
-  },
-  {
-    name: 'Jase Ellis',
-    role: 'Licensed Inspector',
-    imageUrl:jaseheadshot,
-    trec:'',
-    lhi: '11183'
-
-  },
-  // More people...
-]
 
 
 export default async function CustomerService() {
-  const data = await fetch(`${API_URL}api/writers?populate=*`);
-  const writers = await data.json();
+  const data = await fetch(`${API_URL}/api/writers?populate=*`, { next: { revalidate: 10 }});
+  const writersObject = await data.json();
+  const writers = writersObject.data;
+  console.log(writers)
 
   return (
     <div className="bg-white py-10 md:py-16 lg:py-20">
@@ -67,10 +28,10 @@ export default async function CustomerService() {
           
           className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-2"
         >
-          {writers.data.map((person) => (
+          {writers.map((person) => (
  
             <li key={person.id} >
-              <Image className="aspect-[3/2] w-full rounded-2xl object-cover" src={API_URL + person.attributes.picture.data.attributes.url} alt='image' width='50' height='34' />
+              <Image className="aspect-[3/2] w-full rounded-2xl object-cover" src={API_URL + person.attributes.picture.data.attributes.url.slice(1)} alt='image' width='50' height='34' />
               <div className='space-x-2 my-2 absolute -mt-[2.5rem] ml-2 '>
                   {person.attributes.trec_number !== null ?   (<span className="inline-flex items-center rounded-lg bg-gray-50 px-2 py-1 text-xs bg-opacity-80 font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">TREC# {person.attributes.trec_number}</span>) : ''}
              
