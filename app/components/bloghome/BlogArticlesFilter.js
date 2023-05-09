@@ -1,19 +1,19 @@
 
 import Link from "next/link";
-// import { API_URL } from "@/config";
+import { API_URL } from "@/config";
 
-const API_URL = "https://bdainspections-2023.herokuapp.com"
+// const API_URL = "https://bdainspections-2023.herokuapp.com"
 
-async function getArticles() {
-  const res = await fetch(`${API_URL}/api/articles?populate=*`);
-  return res.json();
-}
+// async function getArticles() {
+//   const res = await fetch(`${API_URL}/api/articles?populate=*`);
+//   return res.json();
+// }
  
 
-async function getCategories() {
-  const res = await fetch(`${API_URL}/api/categories`);
-  return res.json();
-}
+// async function getCategories() {
+//   const res = await fetch(`${API_URL}/api/categories`);
+//   return res.json();
+// }
 
 
 
@@ -21,15 +21,14 @@ async function getCategories() {
 
 export default async function BlogArticlesFilter(){
   
+  const articlesRes = await fetch(`${API_URL}/api/writers?populate=*`, { next: { revalidate: 60 } });
+  const articles = await data.json();
 
-  const articlesData = getArticles();
-  const categoriesData = getCategories();
+  const categoriesRes = await fetch(`${API_URL}/api/writers?populate=*`, { next: { revalidate: 60 } });
+  const categories = await data.json();
 
-  // Wait for the promises to resolve
-  const [articles,  categories] = await Promise.all([articlesData, categoriesData]);
- 
 
-  const data = await fetch(`${API_URL}/api/writers?populate=*`, { cache: 'no-store' });
+  const data = await fetch(`${API_URL}/api/writers?populate=*`, { next: { revalidate: 60 } });
   const writersObject = await data.json();
   const writers = writersObject.data;
   const writerArray = writers.data
