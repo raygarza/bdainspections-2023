@@ -165,20 +165,37 @@ import { API_URL } from "@/config";
 //   ]
 
 
+async function getArticles() {
+  const res = await fetch(`${API_URL}/api/articles?populate=*`, { next: { revalidate: 10 }});
+  return res.json();
+}
+ 
+async function getWriters() {
+  const res =  await fetch(`${API_URL}/api/writers?populate=*`, { next: { revalidate: 10 }});
+  return res.json();
+}
+
+async function getCategories() {
+  const res = await fetch(`${API_URL}/api/categories`, { next: { revalidate: 10 }});
+  return res.json();
+}
+
+
+
+
+
 export default async function BlogArticlesFilter(){
   
 
-   const res = await fetch(`${API_URL}/api/articles?populate=*`, { next: { revalidate: 10 }});
-   const articles = await res.json();
+  const articles = getArticles();
+  const writers = getWriters();
+  const categories = getCategories();
 
-   const data = await fetch(`${API_URL}/api/writers?populate=*`, { next: { revalidate: 10 }});
-   const writers = await data.json();
-   const writerArray = writers.data
-  
-   const cats = await fetch(`${API_URL}/api/categories`, { next: { revalidate: 10 }});
-   const categories = await cats.json();
-
+  // Wait for the promises to resolve
+  const [artist, albums] = await Promise.all([articles, writers, categories]);
  
+  const writerArray = writers.data
+
 
   return(
     <div className='grid grid-cols-8 m-auto sm:py-10 sm:space-x-6'>
