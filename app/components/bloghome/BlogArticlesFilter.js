@@ -5,17 +5,17 @@ import Link from "next/link";
 const API_URL = "https://bdainspections-2023.herokuapp.com"
 
 async function getArticles() {
-  const res = await fetch(`${API_URL}/api/articles?populate=*`, { cache: 'no-store' });
+  const res = await fetch(`${API_URL}/api/articles?populate=*`, { next: { revalidate: 10 }});
   return res.json();
 }
  
 async function getWriters() {
-  const res =  await fetch(`${API_URL}/api/writers?populate=*`, { cache: 'no-store' });
+  const res =  await fetch(`${API_URL}/api/writers?populate=*`, { next: { revalidate: 10 }});
   return res.json();
 }
 
 async function getCategories() {
-  const res = await fetch(`${API_URL}/api/categories`, { cache: 'no-store' });
+  const res = await fetch(`${API_URL}/api/categories`, { next: { revalidate: 10 }});
   return res.json();
 }
 

@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 
 export default async function CustomerService() {
-  const data = await fetch(`${API_URL}/api/writers?populate=*`, { next: { revalidate: 10 }});
+  const data = await fetch(`${API_URL}/api/writers?populate=*`,{ cache: 'no-store' });
   const writersObject = await data.json();
   const writers = writersObject.data;
   console.log(writers)
