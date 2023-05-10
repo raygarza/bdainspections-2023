@@ -11,8 +11,6 @@ async function getWriters(){
 }
 
 
-
-
 export default async function CustomerService() {
 
   const writers = await getWriters()

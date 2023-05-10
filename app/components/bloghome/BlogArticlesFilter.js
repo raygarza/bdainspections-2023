@@ -4,13 +4,13 @@ import Link from "next/link";
 
 // const API_URL = "https://bdainspections-2023.herokuapp.com"
 
-async function getWriters(){
-  const res = await fetch(`https://bdainspections-2023.herokuapp.com/api/writers?populate=*`);
-  if(!res.ok){
-    throw new Error('failed to fetch Writer data')
-  }
-  return res.json
-}
+// async function getWriters(){
+//   const res = await fetch(`https://bdainspections-2023.herokuapp.com/api/writers?populate=*`);
+//   if(!res.ok){
+//     throw new Error('failed to fetch Writer data')
+//   }
+//   return res.json
+// }
 
 async function getCategories(){
   const res = await fetch(`https://bdainspections-2023.herokuapp.com/api/categories`);
@@ -42,8 +42,8 @@ export default async function BlogArticlesFilter(){
 
   const categories = await getCategories();
   const articles = await getArticles();
-  const writers = await getWriters();
-  const writerArray = writers.data
+  // const writers = await getWriters();
+  // const writerArray = writers.data
 
 
   return(
@@ -71,7 +71,7 @@ export default async function BlogArticlesFilter(){
                       </label>
                     </div>
                     {/* Mapping through Categories  */}
-                    {categories && categories.data.map((category) => {
+                    {categories.data.map((category) => {
                     
                     return (
                       <div key={category.id} className="flex items-center">
@@ -110,7 +110,7 @@ export default async function BlogArticlesFilter(){
                   defaultValue="All"
                 >
                   <option defaultChecked>All</option>
-                  {categories && categories.data.map((category) => { 
+                  {categories.data.map((category) => { 
                     return(
                       <option key={category.id}>{category.attributes.name}</option>
                     );
@@ -122,24 +122,24 @@ export default async function BlogArticlesFilter(){
           </div>
           
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-4 gap-y-6 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
-            {articles && articles.data.map((article) => {  
-              function writerAvatar(){  
+            {articles.data.map((article) => {  
+              // function writerAvatar(){  
 
-                for(const x in writerArray) {
-                  if (writerArray[x].attributes.name === article.attributes.author.data.attributes.name){
-                    return(writerArray[x].attributes.picture.data.attributes.url)
-                  } 
-                  console.log('writerArray[x].attributes.name: ', writerArray[x].attributes.name)
-                  console.log('article.attributes.author.data.attributes.name: ', article.attributes.author.data.attributes.name)
+              //   for(const x in writerArray) {
+              //     if (writerArray[x].attributes.name === article.attributes.author.data.attributes.name){
+              //       return(writerArray[x].attributes.picture.data.attributes.url)
+              //     } 
+              //     console.log('writerArray[x].attributes.name: ', writerArray[x].attributes.name)
+              //     console.log('article.attributes.author.data.attributes.name: ', article.attributes.author.data.attributes.name)
 
-                 }
-                }
+              //    }
+              //   }
               
             //  console.log('Min read: ', article.attributes.min_read)
             
              return (
               
-              <article key={article.id} className="flex flex-col items-start justify-between ring-1 ring-gray-500/20 bg-white rounded-lg sm:rounded-2xl">
+              <div key={article.id} className="flex flex-col items-start justify-between ring-1 ring-gray-500/20 bg-white rounded-lg sm:rounded-2xl">
                 
                 {/* card thumnail */}
                 <div className="relative w-full">
@@ -172,7 +172,7 @@ export default async function BlogArticlesFilter(){
                   </div>
                   
                   {/* Avatar and name block */}
-                  <div className="group block flex-shrink-0 pb-1 pt-2">
+                  {/* <div className="group block flex-shrink-0 pb-1 pt-2">
                     <div className="flex items-center">
                       <div>
                         <img
@@ -187,9 +187,9 @@ export default async function BlogArticlesFilter(){
                         <p className="text-[10px] font-medium text-gray-500 group-hover:text-gray-700">{article.attributes.author.data.attributes.job_title}</p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
-              </article>
+              </div>
             ) 
 
             })}
