@@ -4,35 +4,25 @@ import { API_URL } from "@/config";
 
 // const API_URL = "https://bdainspections-2023.herokuapp.com"
 
-// async function getArticles() {
-//   const res = await fetch(`${API_URL}/api/articles?populate=*`);
-//   return res.json();
-// }
- 
-
-// async function getCategories() {
-//   const res = await fetch(`${API_URL}/api/categories`);
-//   return res.json();
-// }
-
 
 
 
 
 export default async function BlogArticlesFilter(){
   
-  const articlesRes = await fetch(`${API_URL}/api/writers?populate=*`, { next: { revalidate: 60 } });
+  const articlesRes = await fetch(`https://bdainspections-2023.herokuapp.com/api/writers?populate=*`);
   const articles = await articlesRes.json();
+  console.log(articles)
 
-  const categoriesRes = await fetch(`${API_URL}/api/writers?populate=*`, { next: { revalidate: 60 } });
+  const categoriesRes = await fetch(`https://bdainspections-2023.herokuapp.com/api/writers?populate=*`);
   const categories = await categoriesRes.json();
+  console.log(categories)
 
-
-  const data = await fetch(`${API_URL}/api/writers?populate=*`, { next: { revalidate: 60 } });
+  const data = await fetch(`https://bdainspections-2023.herokuapp.com/api/writers?populate=*`);
   const writersObject = await data.json();
   const writers = writersObject.data;
-  const writerArray = writers.data
-
+  // const writerArray = writers.data
+  console.log(writers)
 
   return(
     <div className='grid grid-cols-8 m-auto sm:py-10 sm:space-x-6'>
@@ -58,7 +48,8 @@ export default async function BlogArticlesFilter(){
                         All
                       </label>
                     </div>
-                    {categories.data.map((category) => (
+                    {/* Mapping through Categories  */}
+                    {/* {categories.data.map((category) => (
                       <div key={category.id} className="flex items-center">
                         <input
                           id={category.id}
@@ -71,7 +62,7 @@ export default async function BlogArticlesFilter(){
                         </label>
                       
                       </div>
-                    ))}
+                    ))} */}
                   </div>
                 </fieldset>
               </div>
@@ -94,73 +85,81 @@ export default async function BlogArticlesFilter(){
                   defaultValue="All"
                 >
                   <option defaultChecked>All</option>
-                  {categories.data.map((category) => (
+                  {/* {categories.data.map((category) => (
                       <option key={category.id}>{category.attributes.name}</option>
-                    ))}
+                    ))} */}
                 </select>
               </div>
           </div>
           
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-4 gap-y-6 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
             {articles.data.map((article) => {  
-              function writerAvatar(){  
+              // function writerAvatar(){  
 
-                for(const x in writerArray) {
-                  if (writerArray[x].attributes.name === article.attributes.author.data.attributes.name){
-                    return(writerArray[x].attributes.picture.data.attributes.url)
-                  } 
-                  console.log('writerArray[x].attributes.name: ', writerArray[x].attributes.name)
-                  console.log('article.attributes.author.data.attributes.name: ', article.attributes.author.data.attributes.name)
+              //   for(const x in writerArray) {
+              //     if (writerArray[x].attributes.name === article.attributes.author.data.attributes.name){
+              //       return(writerArray[x].attributes.picture.data.attributes.url)
+              //     } 
+              //     console.log('writerArray[x].attributes.name: ', writerArray[x].attributes.name)
+              //     console.log('article.attributes.author.data.attributes.name: ', article.attributes.author.data.attributes.name)
 
-                 }
-                }
+              //    }
+              //   }
               
             //  console.log('Min read: ', article.attributes.min_read)
             
              return (
-              <article key={article.id} className="flex flex-col items-start justify-between ring-1 ring-gray-500/20 bg-white rounded-lg sm:rounded-2xl">
-                <div className="relative w-full">
-                  <img
-                    src={article.attributes.image.data.attributes.formats.thumbnail.url}
-                    alt="image"
-                    className="aspect-[16/9] w-full rounded-t-lg sm:rounded-t-2xl bg-gray-100 object-cover "
-                  />
-                  <div className="absolute inset-0 rounded-2xl " />
-                </div>
-                <div className="max-w-xl px-4 pb-4 space-y-2">
-                  <span className="inline-flex items-center rounded-full bg-gray-200 px-2 py-1 my-3 sm:mt-3 sm:mb-1 text-xs sm:text-[10px] font-normal text-gray-700">
-                  {article.attributes.category.data.attributes.name}
-                  </span>
-                  <div className="group relative my-2">
-                    <h3 className="text-lg line-clamp-1 sm:text-sm font-semibold leading-2 text-gray-900 group-hover:text-gray-600">
-                      <Link href={'/blog/' + article.attributes.slug}>
-                        <span className="absolute inset-0" />
-                        {article.attributes.title}
-                      </Link>
-                    </h3>
-                    <p className='text-sm sm:text-[10px] text-gray-500'>{article.attributes.min_read}</p>
-                    <p className="mt-2 line-clamp-2 sm:text-xs sm:leading-2 text-gray-600">{article.attributes.description}</p>
-                    <div className='text-blue-500 hover:text-blue-800 duration-200 text-xs my-2'>Read More {'>'}</div>
-                  </div>
+              <div> hello</div>
+              // <article key={article.id} className="flex flex-col items-start justify-between ring-1 ring-gray-500/20 bg-white rounded-lg sm:rounded-2xl">
+                
+              //   {/* card thumnail */}
+              //   <div className="relative w-full">
+              //     <img
+              //       src={article.attributes.image.data.attributes.formats.thumbnail.url}
+              //       alt="image"
+              //       className="aspect-[16/9] w-full rounded-t-lg sm:rounded-t-2xl bg-gray-100 object-cover "
+              //     />
+              //     <div className="absolute inset-0 rounded-2xl " />
+              //   </div>
+
+              //   <div className="max-w-xl px-4 pb-4 space-y-2">
+              //     {/* Card category pill */}
+              //     <span className="inline-flex items-center rounded-full bg-gray-200 px-2 py-1 my-3 sm:mt-3 sm:mb-1 text-xs sm:text-[10px] font-normal text-gray-700">
+              //     {article.attributes.category.data.attributes.name}
+              //     </span>
+
+              //     {/* card body */}
+              //     <div className="group relative my-2">
+              //       <h3 className="text-lg line-clamp-1 sm:text-sm font-semibold leading-2 text-gray-900 group-hover:text-gray-600">
+              //         <Link href={'/blog/' + article.attributes.slug}>
+              //           <span className="absolute inset-0" />
+              //           {article.attributes.title}
+              //         </Link>
+              //       </h3>
+              //       <p className='text-sm sm:text-[10px] text-gray-500'>{article.attributes.min_read}</p>
+              //       <p className="mt-2 line-clamp-2 sm:text-xs sm:leading-2 text-gray-600">{article.attributes.description}</p>
+              //       <div className='text-blue-500 hover:text-blue-800 duration-200 text-xs my-2'>Read More {'>'}</div>
+              //     </div>
                   
-                  <div className="group block flex-shrink-0 pb-1 pt-2">
-                    <div className="flex items-center">
-                      <div>
-                        <img
-                          className="inline-block h-10 w-10 rounded-full"
-                          src={`${writerAvatar()}`}
-                          alt="writer avatar"
-                        />
+              //     {/* Avatar and name block */}
+              //     <div className="group block flex-shrink-0 pb-1 pt-2">
+              //       <div className="flex items-center">
+              //         <div>
+              //           <img
+              //             className="inline-block h-10 w-10 rounded-full"
+              //             src={`${writerAvatar()}`}
+              //             alt="writer avatar"
+              //           />
                         
-                      </div>
-                      <div className="ml-3">
-                        <p className="text-xs font-medium text-gray-700 group-hover:text-gray-900">{article.attributes.author.data.attributes.name}</p>
-                        <p className="text-[10px] font-medium text-gray-500 group-hover:text-gray-700">{article.attributes.author.data.attributes.job_title}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </article>
+              //         </div>
+              //         <div className="ml-3">
+              //           <p className="text-xs font-medium text-gray-700 group-hover:text-gray-900">{article.attributes.author.data.attributes.name}</p>
+              //           <p className="text-[10px] font-medium text-gray-500 group-hover:text-gray-700">{article.attributes.author.data.attributes.job_title}</p>
+              //         </div>
+              //       </div>
+              //     </div>
+              //   </div>
+              // </article>
             ) 
 
             })}

@@ -1,10 +1,11 @@
-import { API_URL } from '@/config'
+// import { API_URL } from '@/config'
 import Image from 'next/image'
+// const API_URL = "https://bdainspections-2023.herokuapp.com"
 
 
 
 export default async function CustomerService() {
-  const data = await fetch(`${API_URL}/api/writers?populate=*`,{ next: { revalidate: 60 } });
+  const data = await fetch(`https://bdainspections-2023.herokuapp.com/api/writers?populate=*`,{ next: { revalidate: 5 } });
   const writersObject = await data.json();
   const writers = writersObject.data;
   console.log(writers)
