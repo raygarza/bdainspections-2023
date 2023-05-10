@@ -5,7 +5,7 @@ import Link from "next/link";
 // const API_URL = "https://bdainspections-2023.herokuapp.com"
 
 async function getWriters(){
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/writers?populate=*`);
+  const res = await fetch(`https://bdainspections-2023.herokuapp.com/api/writers?populate=*`);
   if(!res.ok){
     throw new Error('failed to fetch Writer data')
   }
@@ -13,7 +13,7 @@ async function getWriters(){
 }
 
 async function getCategories(){
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories`);
+  const res = await fetch(`https://bdainspections-2023.herokuapp.com/api/categories`);
   if(!res.ok){
     throw new Error('failed to fetch Category data')
   }
@@ -21,7 +21,7 @@ async function getCategories(){
 }
 
 async function getArticles(){
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories?populate=*`);
+  const res = await fetch(`https://bdainspections-2023.herokuapp.com/api/categories?populate=*`);
   if(!res.ok){
     throw new Error('failed to fetch Article data')
   }
