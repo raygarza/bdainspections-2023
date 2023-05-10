@@ -17,7 +17,7 @@ async function getCategories(){
   if(!res.ok){
     throw new Error('failed to fetch Category data')
   }
-  return res.json
+  return res.json();
 }
 
 async function getArticles(){
@@ -25,7 +25,7 @@ async function getArticles(){
   if(!res.ok){
     throw new Error('failed to fetch Article data')
   }
-  return res.json
+  return res.json();
 }
 
 export default async function BlogArticlesFilter(){
@@ -71,7 +71,7 @@ export default async function BlogArticlesFilter(){
                       </label>
                     </div>
                     {/* Mapping through Categories  */}
-                    {categories.data.map((category) => {
+                    {categories.data?.map((category) => {
                     
                     return (
                       <div key={category.id} className="flex items-center">
@@ -110,7 +110,7 @@ export default async function BlogArticlesFilter(){
                   defaultValue="All"
                 >
                   <option defaultChecked>All</option>
-                  {categories.data.map((category) => { 
+                  {categories.data?.map((category) => { 
                     return(
                       <option key={category.id}>{category.attributes.name}</option>
                     );
@@ -122,40 +122,40 @@ export default async function BlogArticlesFilter(){
           </div>
           
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-4 gap-y-6 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
-            {articles.data.map((article) => {  
-              // function writerAvatar(){  
+            {articles.data?.map((article) => {  
+              function writerAvatar(){  
 
-              //   for(const x in writerArray) {
-              //     if (writerArray[x].attributes.name === article.attributes.author.data.attributes.name){
-              //       return(writerArray[x].attributes.picture.data.attributes.url)
-              //     } 
-              //     console.log('writerArray[x].attributes.name: ', writerArray[x].attributes.name)
-              //     console.log('article.attributes.author.data.attributes.name: ', article.attributes.author.data.attributes.name)
+                for(const x in writerArray) {
+                  if (writerArray[x].attributes.name === article.attributes.author.data.attributes.name){
+                    return(writerArray[x].attributes.picture.data.attributes.url)
+                  } 
+                  console.log('writerArray[x].attributes.name: ', writerArray[x].attributes.name)
+                  console.log('article.attributes.author.data.attributes.name: ', article.attributes.author.data.attributes.name)
 
-              //    }
-              //   }
+                 }
+                }
               
-            //  console.log('Min read: ', article.attributes.min_read)
+             console.log('Min read: ', article.attributes.min_read)
             
              return (
               
               <div key={article.id} className="flex flex-col items-start justify-between ring-1 ring-gray-500/20 bg-white rounded-lg sm:rounded-2xl">
                 
                 {/* card thumnail */}
-                <div className="relative w-full">
+                {/* <div className="relative w-full">
                   <img
-                    src={article.attributes.image.data.attributes.formats.thumbnail.url}
+                    src={article.attributes.thumbnail.data.attributes.formats.medium.url}
                     alt="image"
                     className="aspect-[16/9] w-full rounded-t-lg sm:rounded-t-2xl bg-gray-100 object-cover "
                   />
                   <div className="absolute inset-0 rounded-2xl " />
-                </div>
+                </div> */}
 
                 <div className="max-w-xl px-4 pb-4 space-y-2">
                   {/* Card category pill */}
-                  <span className="inline-flex items-center rounded-full bg-gray-200 px-2 py-1 my-3 sm:mt-3 sm:mb-1 text-xs sm:text-[10px] font-normal text-gray-700">
+                  {/* <span className="inline-flex items-center rounded-full bg-gray-200 px-2 py-1 my-3 sm:mt-3 sm:mb-1 text-xs sm:text-[10px] font-normal text-gray-700">
                   {article.attributes.category.data.attributes.name}
-                  </span>
+                  </span> */}
 
                   {/* card body */}
                   <div className="group relative my-2">
