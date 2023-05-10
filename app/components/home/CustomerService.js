@@ -2,13 +2,21 @@
 import Image from 'next/image'
 // const API_URL = "https://bdainspections-2023.herokuapp.com"
 
+async function getWriters(){
+  const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/writers?populate=*`);
+  if(!res.ok){
+    throw new Error('failed to fetch Writer data')
+  }
+  return res.json
+}
+
+
 
 
 export default async function CustomerService() {
-  const data = await fetch(`https://bdainspections-2023.herokuapp.com/api/writers?populate=*`,{ next: { revalidate: 5 } });
-  const writersObject = await data.json();
-  const writers = writersObject.data;
-  console.log(writers)
+
+  const writers = await getWriters()
+ 
 
   return (
     <div className="bg-white py-10 md:py-16 lg:py-20">
@@ -29,7 +37,7 @@ export default async function CustomerService() {
           
           className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-2"
         >
-          {writers.map((person) => (
+          {writers.data.map((person) => (
  
             <li key={person.id} >
               <Image className="aspect-[3/2] w-full rounded-2xl object-cover" src={person.attributes.picture.data.attributes.url} alt='image' width='50' height='34' />
