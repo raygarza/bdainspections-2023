@@ -13,7 +13,7 @@ import Link from "next/link";
 // }
 
 async function getCategories(){
-  const res = await fetch(`https://bdainspections-2023.herokuapp.com/api/categories`);
+  const res = await fetch("https://bdainspections-2023.herokuapp.com/api/categories");
   if(!res.ok){
     throw new Error('failed to fetch Category data')
   }
@@ -21,7 +21,7 @@ async function getCategories(){
 }
 
 async function getArticles(){
-  const res = await fetch(`https://bdainspections-2023.herokuapp.com/api/categories?populate=*`);
+  const res = await fetch("https://bdainspections-2023.herokuapp.com/api/categories?populate=*");
   if(!res.ok){
     throw new Error('failed to fetch Article data')
   }

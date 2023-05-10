@@ -3,7 +3,7 @@ import Image from 'next/image'
 // const API_URL = "https://bdainspections-2023.herokuapp.com"
 
 async function getWriters(){
-  const res = await fetch(`https://bdainspections-2023.herokuapp.com/api/writers?populate=*`);
+  const res = await fetch("https://bdainspections-2023.herokuapp.com/api/writers?populate=*");
   if(!res.ok){
     throw new Error('failed to fetch Writer data')
   }
