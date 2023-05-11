@@ -29,21 +29,11 @@ async function getArticles(){
 }
 
 export default async function BlogArticlesFilter(){
-  
-  // const articlesRes = await fetch(`https://bdainspections-2023.herokuapp.com/api/writers?populate=*`);
-  // const articles = await articlesRes.json();
-  // console.log(articles)
 
+  const categoriesData = getCategories();
+  const articlesData = getArticles();
 
-  const data = await fetch(`https://bdainspections-2023.herokuapp.com/api/writers?populate=*`);
-  const writersObject = await data.json();
-  const writers = writersObject.data;
-  console.log(writers)
-
-  const categories = await getCategories();
-  const articles = await getArticles();
-  // const writers = await getWriters();
-  const writerArray = writers.data
+  const [articles, categories] = await Promise.all([categoriesData, articlesData])
 
 
   return(
@@ -123,19 +113,18 @@ export default async function BlogArticlesFilter(){
           
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-4 gap-y-6 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
             {articles.data?.map((article) => {  
-              function writerAvatar(){  
+              // function writerAvatar(){  
 
-                for(const x in writerArray) {
-                  if (writerArray[x].attributes.name === article.attributes.author.data.attributes.name){
-                    return(writerArray[x].attributes.picture.data.attributes.url)
-                  } 
-                  console.log('writerArray[x].attributes.name: ', writerArray[x].attributes.name)
-                  console.log('article.attributes.author.data.attributes.name: ', article.attributes.author.data.attributes.name)
+              //   for(const x in writerArray) {
+              //     if (writerArray[x].attributes.name === article.attributes.author.data.attributes.name){
+              //       return(writerArray[x].attributes.picture.data.attributes.url)
+              //     } 
+              //     console.log('writerArray[x].attributes.name: ', writerArray[x].attributes.name)
+              //     console.log('article.attributes.author.data.attributes.name: ', article.attributes.author.data.attributes.name)
 
-                 }
-                }
+              //    }
+              //   }
               
-             console.log('Min read: ', article.attributes.min_read)
             
              return (
               
@@ -161,12 +150,11 @@ export default async function BlogArticlesFilter(){
                   <div className="group relative my-2">
                     <h3 className="text-lg line-clamp-1 sm:text-sm font-semibold leading-2 text-gray-900 group-hover:text-gray-600">
                       <Link href={`/blog/${article.attributes.slug}`}>
-
                         <span className="absolute inset-0" />
                         {article.attributes.title}
                       </Link>
                     </h3>
-                    <p className='text-sm sm:text-[10px] text-gray-500'>{article.attributes.min_read}</p>
+                    <p className='text-sm sm:text-[10px] text-gray-500'>Min Read: {article.attributes.min_read}</p>
                     <p className="mt-2 line-clamp-2 sm:text-xs sm:leading-2 text-gray-600">{article.attributes.description}</p>
                     <div className='text-blue-500 hover:text-blue-800 duration-200 text-xs my-2'>Read More {'>'}</div>
                   </div>
@@ -174,14 +162,14 @@ export default async function BlogArticlesFilter(){
                   {/* Avatar and name block */}
                   <div className="group block flex-shrink-0 pb-1 pt-2">
                     <div className="flex items-center">
-                      <div>
+                      {/* <div>
                         <img
                           className="inline-block h-10 w-10 rounded-full"
                           src={`${writerAvatar()}`}
                           alt="writer avatar"
                         />
                         
-                      </div>
+                      </div> */}
                       <div className="ml-3">
                         <p className="text-xs font-medium text-gray-700 group-hover:text-gray-900">{article.attributes.author.data.attributes.name}</p>
                         <p className="text-[10px] font-medium text-gray-500 group-hover:text-gray-700">{article.attributes.author.data.attributes.job_title}</p>
