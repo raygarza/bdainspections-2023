@@ -33,7 +33,7 @@ export default async function BlogArticlesFilter(){
   const categoriesData = getCategories();
   const articlesData = getArticles();
 
-  const [articles, categories] = await Promise.all([categoriesData, articlesData])
+  const [articles, categories] = await Promise.all([articlesData, categoriesData])
 
 
   return(
@@ -61,8 +61,8 @@ export default async function BlogArticlesFilter(){
                       </label>
                     </div>
                     {/* Mapping through Categories  */}
-                    {categories.data?.map((category) => {
-                    
+                    {categories.data.map((category) => {
+                    // console.log(category.attributes.title)
                     return (
                       <div key={category.id} className="flex items-center">
                         <input
@@ -133,7 +133,7 @@ export default async function BlogArticlesFilter(){
                 {/* card thumnail */}
                 {/* <div className="relative w-full">
                   <img
-                    src={article.attributes.thumbnail.data.attributes.formats.thumbnail.url}
+                    src={article.attributes.thumbnail?.data.attributes.formats.thumbnail.url}
                     alt="image"
                     className="aspect-[16/9] w-full rounded-t-lg sm:rounded-t-2xl bg-gray-100 object-cover "
                   />
