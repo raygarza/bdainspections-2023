@@ -125,6 +125,8 @@ export default async function BlogArticlesFilter(){
               //    }
               //   }
               
+              // console.log(`${article.attributes.thumbnail?.data.attributes.formats.thumbnail.url}`)
+              // console.log('test')
             
              return (
               
@@ -154,14 +156,14 @@ export default async function BlogArticlesFilter(){
                         {article.attributes.title}
                       </Link>
                     </h3>
-                    <p className='text-sm sm:text-[10px] text-gray-500'>Min Read: {article.attributes.min_read}</p>
+                    {article.attributes.min_read !== null | article.attributes.min_read !== '' && <p className='text-sm sm:text-[10px] text-gray-500'>{article.attributes.min_read} minute read</p>}
                     <p className="mt-2 line-clamp-2 sm:text-xs sm:leading-2 text-gray-600">{article.attributes.description}</p>
                     <div className='text-blue-500 hover:text-blue-800 duration-200 text-xs my-2'>Read More {'>'}</div>
                   </div>
                   
                   {/* Avatar and name block */}
                   <div className="group block flex-shrink-0 pb-1 pt-2">
-                    <div className="flex items-center">
+                    <div className="flex items-center mr-3">
                       {/* <div>
                         <img
                           className="inline-block h-10 w-10 rounded-full"
@@ -170,7 +172,7 @@ export default async function BlogArticlesFilter(){
                         />
                         
                       </div> */}
-                      <div className="ml-3">
+                      <div>
                         <p className="text-xs font-medium text-gray-700 group-hover:text-gray-900">{article.attributes.author?.data.attributes.name}</p>
                         <p className="text-[10px] font-medium text-gray-500 group-hover:text-gray-700">{article.attributes.author?.data.attributes.job_title}</p>
                       </div>
