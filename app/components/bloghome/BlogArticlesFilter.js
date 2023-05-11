@@ -21,7 +21,7 @@ async function getCategories(){
 }
 
 async function getArticles(){
-  const res = await fetch("https://bdainspections-2023.herokuapp.com/api/categories?populate=*");
+  const res = await fetch("https://bdainspections-2023.herokuapp.com/api/articles?populate=*");
   if(!res.ok){
     throw new Error('failed to fetch Article data')
   }
@@ -142,20 +142,20 @@ export default async function BlogArticlesFilter(){
               <div key={article.id} className="flex flex-col items-start justify-between ring-1 ring-gray-500/20 bg-white rounded-lg sm:rounded-2xl">
                 
                 {/* card thumnail */}
-                {/* <div className="relative w-full">
+                <div className="relative w-full">
                   <img
-                    src={article.attributes.thumbnail.data.attributes.formats.medium.url}
+                    src={article.attributes.thumbnail.data.attributes.formats.thumbnail.url}
                     alt="image"
                     className="aspect-[16/9] w-full rounded-t-lg sm:rounded-t-2xl bg-gray-100 object-cover "
                   />
                   <div className="absolute inset-0 rounded-2xl " />
-                </div> */}
+                </div>
 
                 <div className="max-w-xl px-4 pb-4 space-y-2">
                   {/* Card category pill */}
-                  {/* <span className="inline-flex items-center rounded-full bg-gray-200 px-2 py-1 my-3 sm:mt-3 sm:mb-1 text-xs sm:text-[10px] font-normal text-gray-700">
+                  <span className="inline-flex items-center rounded-full bg-gray-200 px-2 py-1 my-3 sm:mt-3 sm:mb-1 text-xs sm:text-[10px] font-normal text-gray-700">
                   {article.attributes.category.data.attributes.name}
-                  </span> */}
+                  </span>
 
                   {/* card body */}
                   <div className="group relative my-2">
@@ -172,7 +172,7 @@ export default async function BlogArticlesFilter(){
                   </div>
                   
                   {/* Avatar and name block */}
-                  {/* <div className="group block flex-shrink-0 pb-1 pt-2">
+                  <div className="group block flex-shrink-0 pb-1 pt-2">
                     <div className="flex items-center">
                       <div>
                         <img
@@ -187,7 +187,7 @@ export default async function BlogArticlesFilter(){
                         <p className="text-[10px] font-medium text-gray-500 group-hover:text-gray-700">{article.attributes.author.data.attributes.job_title}</p>
                       </div>
                     </div>
-                  </div> */}
+                  </div>
                 </div>
               </div>
             ) 
