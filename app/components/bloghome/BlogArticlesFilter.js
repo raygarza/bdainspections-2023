@@ -143,7 +143,7 @@ export default async function BlogArticlesFilter(){
                 <div className="max-w-xl px-4 pb-4 space-y-2">
                   {/* Card category pill */}
                   <span className="inline-flex items-center rounded-full bg-gray-200 px-2 py-1 my-3 sm:mt-3 sm:mb-1 text-xs sm:text-[10px] font-normal text-gray-700">
-                  {article.attributes.category.data.attributes.name}
+                  {article.attributes.category?.data.attributes.name}
                   </span>
 
                   {/* card body */}
@@ -171,8 +171,8 @@ export default async function BlogArticlesFilter(){
                         
                       </div> */}
                       <div className="ml-3">
-                        <p className="text-xs font-medium text-gray-700 group-hover:text-gray-900">{article.attributes.author.data.attributes.name}</p>
-                        <p className="text-[10px] font-medium text-gray-500 group-hover:text-gray-700">{article.attributes.author.data.attributes.job_title}</p>
+                        <p className="text-xs font-medium text-gray-700 group-hover:text-gray-900">{article.attributes.author?.data.attributes.name}</p>
+                        <p className="text-[10px] font-medium text-gray-500 group-hover:text-gray-700">{article.attributes.author?.data.attributes.job_title}</p>
                       </div>
                     </div>
                   </div>
