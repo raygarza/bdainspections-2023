@@ -2,7 +2,7 @@
 import Image from 'next/image'
 
 async function getWriters(){
-  const res = await fetch("https://bdainspections-2023.herokuapp.com/api/writers?populate=*");
+  const res = await fetch("https://bdainspections-2023.herokuapp.com/api/writers?populate=*", { cache: 'no-store' });
   return res.json();
 }
 

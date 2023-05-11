@@ -13,7 +13,7 @@ import Link from "next/link";
 // }
 
 async function getCategories(){
-  const res = await fetch("https://bdainspections-2023.herokuapp.com/api/categories");
+  const res = await fetch("https://bdainspections-2023.herokuapp.com/api/categories",{ cache: 'no-store' } );
   if(!res.ok){
     throw new Error('failed to fetch Category data')
   }
@@ -21,7 +21,7 @@ async function getCategories(){
 }
 
 async function getArticles(){
-  const res = await fetch("https://bdainspections-2023.herokuapp.com/api/articles?populate=*");
+  const res = await fetch("https://bdainspections-2023.herokuapp.com/api/articles?populate=*", { cache: 'no-store' });
   if(!res.ok){
     throw new Error('failed to fetch Article data')
   }
@@ -173,7 +173,7 @@ export default async function BlogArticlesFilter(){
                         
                       </div> */}
                       <div>
-                        <p className="text-xs font-medium text-gray-700 group-hover:text-gray-900">Written By: {article.attributes.author?.data.attributes.name}</p>
+                        <p className="text-xs font-medium text-gray-700 group-hover:text-gray-900">By: {article.attributes.author?.data.attributes.name}</p>
                         <p className="text-[10px] font-medium text-gray-500 group-hover:text-gray-700">{article.attributes.author?.data.attributes.job_title}</p>
                       </div>
                     </div>
