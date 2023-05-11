@@ -173,7 +173,7 @@ export default async function BlogArticlesFilter(){
                         
                       </div> */}
                       <div>
-                        <p className="text-xs font-medium text-gray-700 group-hover:text-gray-900">{article.attributes.author?.data.attributes.name}</p>
+                        <p className="text-xs font-medium text-gray-700 group-hover:text-gray-900">Written By: {article.attributes.author?.data.attributes.name}</p>
                         <p className="text-[10px] font-medium text-gray-500 group-hover:text-gray-700">{article.attributes.author?.data.attributes.job_title}</p>
                       </div>
                     </div>
