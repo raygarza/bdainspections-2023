@@ -35,15 +35,15 @@ export default async function BlogArticlesFilter(){
   // console.log(articles)
 
 
-  // const data = await fetch(`https://bdainspections-2023.herokuapp.com/api/writers?populate=*`);
-  // const writersObject = await data.json();
-  // const writers = writersObject.data;
-  // console.log(writers)
+  const data = await fetch(`https://bdainspections-2023.herokuapp.com/api/writers?populate=*`);
+  const writersObject = await data.json();
+  const writers = writersObject.data;
+  console.log(writers)
 
   const categories = await getCategories();
   const articles = await getArticles();
   // const writers = await getWriters();
-  // const writerArray = writers.data
+  const writerArray = writers.data
 
 
   return(
@@ -142,14 +142,14 @@ export default async function BlogArticlesFilter(){
               <div key={article.id} className="flex flex-col items-start justify-between ring-1 ring-gray-500/20 bg-white rounded-lg sm:rounded-2xl">
                 
                 {/* card thumnail */}
-                <div className="relative w-full">
+                {/* <div className="relative w-full">
                   <img
                     src={article.attributes.thumbnail.data.attributes.formats.thumbnail.url}
                     alt="image"
                     className="aspect-[16/9] w-full rounded-t-lg sm:rounded-t-2xl bg-gray-100 object-cover "
                   />
                   <div className="absolute inset-0 rounded-2xl " />
-                </div>
+                </div> */}
 
                 <div className="max-w-xl px-4 pb-4 space-y-2">
                   {/* Card category pill */}
