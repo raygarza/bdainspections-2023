@@ -32,7 +32,7 @@ export default async function RecentArticles() {
                 >
                   <Link href={`/blog/${article.attributes.slug}`}>
                     {/* card thumbnail */}
-                    <div className="relative w-full hidden sm:block">
+                    <div className="relative w-full">
                       <img
                         src={
                           article.attributes.thumbnail?.data.attributes.formats
