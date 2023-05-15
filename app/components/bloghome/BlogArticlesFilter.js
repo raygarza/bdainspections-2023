@@ -151,7 +151,7 @@ export default async function BlogArticlesFilter(){
                   {/* card body */}
                   <div className="group relative my-2">
                     <h3 className="text-lg line-clamp-1 sm:text-sm font-semibold leading-2 text-gray-900 group-hover:text-gray-600">
-                      <Link href={`/blog/${article.attributes.slug}`}>
+                      <Link href={`/blog/${article.attributes.slug}`} slug={article.attributes.slug}>
                         <span className="absolute inset-0" />
                         {article.attributes.title}
                       </Link>
