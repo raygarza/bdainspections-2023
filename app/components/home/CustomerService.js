@@ -4,11 +4,12 @@ import Link from "next/link";
 
 async function getWriters() {
   const res = await fetch(
-    "https://bdainspections-2023.herokuapp.com/api/writers?populate=*&filters[name][$ne]=BDA Inspections",
+    "https://bdainspections-2023.herokuapp.com/api/writers?populate=*&filters[name][$ne]=BDA%20Inspections",
     { cache: "no-store" },
   );
   return res.json();
 }
+
 
 export default async function CustomerService() {
   const writers = await getWriters();

@@ -30,7 +30,7 @@ const testimonials = [
         'https://lh3.googleusercontent.com/a/AGNmyxY9fZphktBSUxo2rDyrr1zk48rDgf5W02yzl65X=w90-h90-p-rp-mo-br100'    },
   },
   {
-    id: 1,
+    id: 4,
     body: 'This company was super easy to schedule with, friendly, offer first time home buyer discount and the inspector was super thorough with everything, very talkative, and definitely let’s you know anything concerning, there were tons of things we did not spot that when he pointed out we were like, “how did we not see this?.” But we are thankful they came out to help us. Highly recommend BDA Inspections! 👍🏻',
     author: {
       name: 'Russell Guidry',
@@ -40,7 +40,7 @@ const testimonials = [
     },
   },
   {
-    id: 1,
+    id: 5,
     body: 'Jase was so professional and thorough. As a first time buyer, I am unaware of the ins and outs of builds. He took the time to explain everything to me in a way that helped me understand. I would absolutely recommend BDA to anyone needing an inspector.',
     author: {
       name: 'Kellie Langley',
@@ -50,7 +50,7 @@ const testimonials = [
     },
   },
   {
-    id: 1,
+    id: 6,
     body: 'BDA was recommended by our realtor. They accepted a last minute inspection request. Jace was our inspector, and he was spectacular. He went into detail about everything he discovered. As he pointed out things, he included the importance of them and made sure we understood everything. He was able to answer all of our questions, even the ones that weren’t covered by the inspection. He also had a great sense of humor and was easy going, which is always a plus. I would definitely recommend BDA, especially Jace, to anyone needing an inspection!',
     author: {
       name: 'Sarah',
@@ -60,7 +60,7 @@ const testimonials = [
     },
   },
   {
-    id: 1,
+    id: 7,
     body: 'Jace did a very thorough job.  He was very informative and took a picture as well as documented every little detail he saw that needed to be addressed.  I would 100% recommended him for any inspection.  It helps give peace of mind before buying our new home.  Thanks!',
     author: {
       name: 'Bradley Yellot',
@@ -70,7 +70,7 @@ const testimonials = [
     },
   },
   {
-    id: 1,
+    id: 8,
     body: 'This is a very professional and thorough company! I highly recommend you use them as they will go over every inch of your house and ensure EVERYTHING is working as it should.',
     author: {
       name: 'Sircharles*',
@@ -80,7 +80,7 @@ const testimonials = [
     },
   },
   {
-    id: 1,
+    id: 9,
     body: 'The inspector who assisted us in our peace of mind needs was Chris. He went through with a fine tooth comb to ensure my husband and I knew what we were up against by giving us a walkthrough of the entire home. His assistance allows us the benefit of moving forward with a strategic plan for potential future repairs. Thanks again BDA inspections!',
     author: {
       name: 'Mrs McPherson',
@@ -90,7 +90,7 @@ const testimonials = [
     },
   },
   {
-    id: 1,
+    id: 10,
     body: 'bodytext',
     author: {
       name: 'LeslieAlexander',

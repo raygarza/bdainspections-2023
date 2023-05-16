@@ -14,8 +14,9 @@ async function getArticles() {
 
 export default async function RecentArticles() {
   const articlesData = getArticles();
-  const [articles] = await Promise.all([articlesData]);
-  console.log(articles);
+  const [articlesArray] = await Promise.all([articlesData]);
+  const articles = articlesArray.data.slice(0, 3);
+
 
   return (
     <div>
@@ -29,24 +30,27 @@ export default async function RecentArticles() {
           <div className="py-1 bg-[#434639] w-20 mt-2 mb-6"></div>
 
           <div className="grid grid-cols-3 gap-x-4 space-y-4 sm:space-y-0 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
-            {articles.data.map((article) => {
+            {articles.map((article) => {
               return (
                 <div
                   key={article.id}
                   className="col-span-3 h-fit sm:col-span-1 flex flex-col items-start justify-between ring-1 ring-gray-500/20 hover:ring-gray-500/40 hover:opacity-95 duration-200 bg-white rounded-lg sm:rounded-2xl"
                 >
                   <Link href={`/blog/${article.attributes.slug}`}>
+
                     {/* card thumbnail */}
                     <div className="relative w-full">
-                      <img
+                    <img
                         src={
-                          article.attributes.thumbnail?.data.attributes.url
+                          article.attributes.thumbnail?.data.attributes.formats
+                            .medium.url
                         }
                         alt="image"
                         className="aspect-[16/9] w-full rounded-t-lg sm:rounded-t-2xl bg-gray-100 object-cover "
                       />
                       <div className="absolute inset-0 rounded-2xl " />
                     </div>
+
 
                     <div className="max-w-xl px-4 py-4 space-y-1">
                       {/* Card category pill */}
@@ -92,8 +96,7 @@ export default async function RecentArticles() {
                             </p>
                             <p className="text-[10px] font-medium text-gray-500 group-hover:text-gray-700">
                               {
-                                article.attributes.author?.data.attributes
-                                  .job_title
+                                article.attributes.author?.data.attributes.job_title
                               }
                             </p>
                           </div>

@@ -31,7 +31,6 @@ export default async function SingleArticle({ params }) {
   ]);
 
   const articles = articlesArray.data.slice(0, 3);
-  // console.log(singleArticle.data[0])
 
   const pages = [
     { name: "Blog", href: "/blog", current: false },
