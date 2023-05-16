@@ -3,7 +3,8 @@ import Link from "next/link";
 
 async function getArticles() {
   const res = await fetch(
-    `https://bdainspections-2023.herokuapp.com/api/articles?populate=*&pagination[page]=1&pagination[pageSize]=3`,
+    'https://bdainspections-2023.herokuapp.com/api/articles?populate=*',
+    { cache: "no-store" },
   );
   if (!res.ok) {
     throw new Error("failed to fetch Article data");
