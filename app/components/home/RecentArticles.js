@@ -39,8 +39,7 @@ export default async function RecentArticles() {
                     <div className="relative w-full">
                       <img
                         src={
-                          article.attributes.thumbnail?.data.attributes.formats
-                            .medium.url
+                          article.attributes.thumbnail?.data.attributes.url
                         }
                         alt="image"
                         className="aspect-[16/9] w-full rounded-t-lg sm:rounded-t-2xl bg-gray-100 object-cover "

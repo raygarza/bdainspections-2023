@@ -127,10 +127,7 @@ export default async function SingleArticle({ params }) {
             <div className="col-span-8 sm:col-span-4 ">
               <div className="relative sm:mt-10  w-full sm:w-[90%] pb-10">
                 <img
-                  src={
-                    singleArticle.data[0].attributes.thumbnail.data.attributes
-                      .formats.large.url
-                  }
+                  src={singleArticle.data[0].attributes.thumbnail.data.attributes.url}
                   alt="image"
                   className="aspect-[16/9] w-full rounded-lg sm:rounded-t-2xl bg-gray-100 object-cover "
                 />

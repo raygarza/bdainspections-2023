@@ -8,7 +8,7 @@ import { Transition, Dialog } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import logo from "../../../public/img/brand/bda-logolight.svg";
-import NavbarPill from "./NavbarDrop";
+import NavbarDrop from "./NavbarDrop";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -75,7 +75,7 @@ export default function NavbarMain() {
             >
               Reviews
             </Link>
-            <NavbarPill />
+            <NavbarDrop />
             <a
               href="tel:3374995872"
               className="inline-flex items-center   text-sm font-medium border-[#653033] border duration-300 p-3  rounded-lg h-fit text-[#653033]"

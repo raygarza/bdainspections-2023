@@ -3,7 +3,7 @@ import Image from "next/image";
 
 async function getWriters() {
   const res = await fetch(
-    "https://bdainspections-2023.herokuapp.com/api/writers?populate=*",
+    "https://bdainspections-2023.herokuapp.com/api/writers?populate=*&filters[name][$ne]=BDA Inspections",
     { cache: "no-store" },
   );
   return res.json();
