@@ -30,6 +30,7 @@ export default function NavbarMain() {
     const y =
       element.getBoundingClientRect().top + window.pageYOffset + yOffset;
     window.scrollTo({ top: y, behavior: "smooth" });
+    setOpen(false);
 
     // this will get me to id, but need a y offset because i scrols too far.
     // document.getElementById(`${scrollvalue}`).scrollIntoView();
@@ -63,12 +64,13 @@ export default function NavbarMain() {
             <Link
               href="/blog"
               className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-[#653033] "
+              onClick={() => navClose()}
             >
               Blog
             </Link>
 
             <a
-              onClick={() => smoothscroll("cities")}
+              onClick={() => (smoothscroll("cities"), navClose())}
               href="#cities"
               className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-[#653033] "
             >
@@ -76,7 +78,7 @@ export default function NavbarMain() {
             </a>
 
             <a
-              onClick={() => smoothscroll("customerservice")}
+              onClick={() => (smoothscroll("customerservice"), navClose())}
               href="#customerservice"
               className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-[#653033] "
             >
@@ -84,7 +86,7 @@ export default function NavbarMain() {
             </a>
 
             <a
-              onClick={() => smoothscroll("services")}
+              onClick={() => (smoothscroll("services"), navClose())}
               href="#services"
               className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-[#653033] "
             >
@@ -139,8 +141,17 @@ export default function NavbarMain() {
                           <div className="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
                             <div className="px-4 sm:px-6">
                               <div className="flex items-start justify-between">
-                                <Dialog.Title className="text-base font-semibold leading-6 text-gray-900">
-                                  Logo Here
+                                <Dialog.Title className="text-base font-semibold my-8 leading-6 text-gray-900">
+                                  <Link href="/">
+                                    <div className="flex space-x-2 items-center">
+                                      <Image src={logo} width={80} />
+                                      <div>|</div>
+
+                                      <div className="my-auto font-semibold text-lg sm:text-xl">
+                                        Lake Charles
+                                      </div>
+                                    </div>
+                                  </Link>
                                 </Dialog.Title>
                                 <div className="ml-3 flex h-7 items-center">
                                   <button
@@ -158,40 +169,40 @@ export default function NavbarMain() {
                               </div>
                             </div>
                             <div className="relative mt-6 flex-1 px-4 sm:px-6">
-                              <ul className=" font-semibold text-xl">
+                              <ul className=" font-semibold space-y-10 text-xl flex flex-col columns-1">
                                 <Link
                                   href="/blog"
-                                  className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-[#653033] "
+                                  className=" items-center text-gray-500 hover:text-[#653033] "
                                 >
                                   Blog
                                 </Link>
 
                                 <a
                                   href="#cities"
-                                  className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-[#653033] "
+                                  className=" items-center text-gray-500 hover:text-[#653033] "
                                 >
                                   About
                                 </a>
 
                                 <a
                                   href="#customerservice"
-                                  className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-[#653033] "
+                                  className=" items-center text-gray-500 hover:text-[#653033] "
                                 >
                                   Team
                                 </a>
 
                                 <a
                                   href="#services"
-                                  className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-[#653033] "
+                                  className=" items-center text-gray-500 hover:text-[#653033] "
                                 >
                                   Services
                                 </a>
 
                                 <a
                                   href="tel:3374995872"
-                                  className="inline-flex items-center   text-sm font-medium border-[#653033] border duration-300 p-3  rounded-lg h-fit text-[#653033]"
+                                  className="border-[#653033] border duration-300 p-3 text-center rounded-lg h-fit text-[#653033]"
                                 >
-                                  <span>Schedule An Inspection</span>
+                                  Schedule An Inspection
                                 </a>
                               </ul>
                             </div>
