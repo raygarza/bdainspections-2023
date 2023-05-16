@@ -29,7 +29,7 @@ export default function Hero() {
          </p>
          <div className="mt-10 flex items-center gap-3">
            <a
-             href="#"
+             href="tel:3374995872"
              className="rounded-md duration-200 bg-[#653033] hover:bg-[#823f42] border border-[#653033] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#653033]"
            >
             Schedule Inspection

@@ -21,6 +21,14 @@ a {
 }
 
 
+img {
+	user-select: none;
+}
+
+html {
+	user-select: none;
+}
+
 
 .blog-header{
 	background-image: url('../public/img/layout/blog-header-background.jpg');
