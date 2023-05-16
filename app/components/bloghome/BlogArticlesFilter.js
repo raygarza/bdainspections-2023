@@ -91,12 +91,12 @@ export default async function BlogArticlesFilter() {
       <div className="col-span-8 lg:col-span-8">
         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="pb-6 ">
-            <h1 className="text-2xl lg:text-2xl pb-1 font-bold lg:font-extrabold">
+            <h1 className="text-2xl lg:text-2xl pb-3 font-bold lg:font-extrabold">
               Latest Articles
             </h1>
             <p className="w-12 border-t-[6px]  border-[#6c705d]"></p>
 
-            <div className="mt-4 lg:hidden">
+            <div className="mt-4 hidden">
               <select
                 id="location"
                 name="location"
@@ -117,28 +117,13 @@ export default async function BlogArticlesFilter() {
 
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-4 gap-y-6 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
             {articles.data?.map((article) => {
-              // function writerAvatar(){
-
-              //   for(const x in writerArray) {
-              //     if (writerArray[x].attributes.name === article.attributes.author.data.attributes.name){
-              //       return(writerArray[x].attributes.picture.data.attributes.url)
-              //     }
-              //     console.log('writerArray[x].attributes.name: ', writerArray[x].attributes.name)
-              //     console.log('article.attributes.author.data.attributes.name: ', article.attributes.author.data.attributes.name)
-
-              //    }
-              //   }
-
-              // console.log(`${article.attributes.thumbnail?.data.attributes.formats.thumbnail.url}`)
-              // console.log('test')
-
               return (
                 <div
                   key={article.id}
                   className="flex flex-col items-start justify-between ring-1 ring-gray-500/20 hover:opacity-90 bg-white rounded-lg sm:rounded-2xl"
                 >
                   <Link href={`/blog/${article.attributes.slug}`}>
-                    {/* card thumnail */}
+                    {/* card thumbnail */}
                     <div className="relative w-full">
                       <img
                         src={

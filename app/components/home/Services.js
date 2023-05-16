@@ -29,14 +29,14 @@ export default async function RecentArticles() {
       {/* Recent articles and other section */}
       <div>
         {/* Recent articles */}
-        <div className="mx-auto max-w-[100rem]  px-6 lg:px-16 py-10">
+        <div className="mx-auto max-w-[100rem]  px-6 lg:px-16 pt-16 pb-10">
           <h1 className="text-xl sm:text-2xl  font-bold tracking-tight text-gray-800 ">
             Our Services
           </h1>
           <div className="py-1 bg-[#434639] w-20 mt-2 mb-6"></div>
 
           <p className="my-6 max-w-3xl text-lg leading-6 text-gray-600">
-          We're open 7 days a week, and every inspection that we perform comes with multiple FREE warranties! Transparent pricing, text-confirmation of appointments,a reports emailed within 1 business day are just a few tings that set us apart.
+          We're open 7 days a week, and every inspection that we perform comes with multiple FREE warranties! <br/><br/>Transparent pricing, text-confirmation of appointments,a reports emailed within 1 business day are just a few tings that set us apart.
           </p>
 
           <div className="grid grid-cols-3 gap-x-4 my-6 space-y-4 sm:space-y-0 lg:mx-0 lg:max-w-none lg:grid-cols-3 cursor-pointer">

@@ -41,7 +41,7 @@ export default function ServiceArea() {
       {/* Recent articles and other section */}
       <div>
         {/* Recent articles */}
-        <div className="mx-auto max-w-[100rem]  px-6 lg:px-16 pb-10">
+        <div className="mx-auto max-w-[100rem] my-10 px-6 lg:px-16 pb-10">
           <h1 className="text-xl sm:text-2xl  font-bold tracking-tight text-gray-800 ">
             Service Area
           </h1>
@@ -51,23 +51,21 @@ export default function ServiceArea() {
             We cover all of Southwest Louisiana -  If you have any question as to whether we cover your area, feel free to reach out.
           </p>
 
-          <div className="grid grid-cols-2 gap-x-4 gap-y-4 lg:mx-0 lg:max-w-none lg:grid-cols-4 cursor-pointer">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-4 lg:mx-0 lg:max-w-none lg:grid-cols-4">
             {areas.map((area) => {
               return (
                 <div
                   key={area.id}
-                  className="col-span-1 h-fit py-4  hover:opacity-95  duration-200 sm:col-span-1 flex flex-col items-start justify-between ring-1 ring-gray-500/20 hover:ring-gray-500/50  bg-white rounded-lg sm:rounded-2xl"
+                  className="col-span-1 h-fit py-2  hover:opacity-95  duration-200 sm:col-span-1 flex flex-col items-start justify-between border  bg-white rounded-lg sm:rounded-lg"
                 >
                   
-                    <div className="max-w-xl px-4 py-0">
+                    <div className="max-w-xl m-auto px-4 pt-1">
                       {/* card body */}
-                      <div className="group relative mb-2">
-                        <h3 className="text-base line-clamp-1 sm:text-sm font-semibold leading-2 text-gray-900 group-hover:text-gray-600">
-                          <span className="absolute inset-0" />
+                      <div className=" relative mb-2">
+                        <h3 className=" line-clamp-1 text-sm mx-auto text-center font-semibold text-gray-900 group-hover:text-gray-600">
                           {area.title}
                         </h3>
                       </div>
-
                     </div>
                 
                 </div>

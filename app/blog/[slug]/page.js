@@ -44,15 +44,15 @@ export default async function SingleArticle({ params }) {
         {/* Breadcrumbs */}
         <div className="bg-[#f4f4f4]">
           <nav
-            className="flex bg-[#f4f4f4] pb-3 pt-6 sm:-mb-4  sm:py-3 sm:pb-0 max-w-4xl 2xl:max-w-7xl px-6 mx-auto"
+            className="flex bg-[#f4f4f4] pb-3 pt-4 sm:-mb-8  sm:pt-6  sm:pb-0 max-w-4xl 2xl:max-w-7xl px-6 mx-auto"
             aria-label="Breadcrumb"
           >
             <ol role="list" className="flex items-center space-x-2">
               <li>
                 <div>
-                  <a href="/" className="text-gray-400 hover:text-gray-800">
+                  <a href="/" className="text-gray-600 hover:text-gray-800">
                     <HomeIcon
-                      className="sm:h-5 sm:w-5 h-7 w-7 flex-shrink-0"
+                      className="h-5 w-5 flex-shrink-0"
                       aria-hidden="true"
                     />
                     <span className="sr-only">Home</span>
@@ -72,7 +72,7 @@ export default async function SingleArticle({ params }) {
                     </svg>
                     <a
                       href={page.href}
-                      className="ml-2 text-base sm:text-sm font-medium text-gray-400 hover:text-gray-700"
+                      className="ml-2 text-sm font-normal text-gray-500 hover:text-gray-800"
                       aria-current={page.current ? "page" : undefined}
                     >
                       {page.name}

@@ -15,8 +15,8 @@ export default function Homepage() {
 
       <RecentArticles />
       <GreenReviews />
-      <CustomerService />
       <Services/>
+      <CustomerService />
       <ServiceArea />
 
     </main>

@@ -21,7 +21,7 @@ export default async function RecentArticles() {
   return (
     <div>
       {/* Recent articles and other section */}
-      <div>
+      <div className='bg-white'>
         {/* Recent articles */}
         <div className="mx-auto max-w-[100rem]  px-6 lg:px-16 font-semibold py-10">
           <h1 className="text-xl sm:text-2xl  font-bold tracking-tight text-gray-800 ">

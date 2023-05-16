@@ -36,17 +36,17 @@ export default async function CustomerService() {
         </div>
         </div>
 
-        <ul className="mx-auto grid max-w-2xl grid-cols-1 sm:gap-x-6 gap-y-8 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-3">
+        <ul className="-mt-6 sm:mt-0 grid sm:max-w-2xl grid-cols-1 sm:gap-x-6 gap-y-8 sm:grid-cols-2 mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-3">
           {writers.data?.map((person) => (
             <li key={person.id}>
               <Image
                 className="aspect-[3/2] w-full rounded-2xl object-cover"
                 src={person.attributes.picture.data.attributes.url}
                 alt="image"
-                width="50"
+                width="60"
                 height="34"
               />
-              <div className="space-x-2 my-2 absolute -mt-[2.5rem] ml-2 ">
+              <div className="space-x-2 my-2 absolute -mt-[2.5rem] sm:ml-2 ">
                 {person.attributes.trec_number !== null ? (
                   <span className="inline-flex items-center rounded-lg bg-gray-50 px-2 py-1 text-xs bg-opacity-80 font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
                     TREC# {person.attributes.trec_number}
