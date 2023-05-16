@@ -64,14 +64,14 @@ export default function NavbarMain() {
             <Link
               href="/blog"
               className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-[#653033] "
-              onClick={() => navClose()}
+             
             >
               Blog
             </Link>
             <Link
               href="/reviews"
               className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-[#653033] "
-              onClick={() => navClose()}
+              
             >
               Reviews
             </Link>
@@ -152,8 +152,9 @@ export default function NavbarMain() {
                               </div>
                             </div>
                             <div className="relative mt-6 flex-1 px-4 sm:px-6">
-                              <ul className=" font-semibold space-y-10 text-xl flex flex-col columns-1">
-                                <Link
+                              <ul className=" font-normal space-y-6 text-xl flex divide-y divide-gray-200 flex-col columns-1">
+                                <li className='flex flex-col columns-1 space-y-6'>
+                                  <Link
                                   href="/"
                                   className=" items-center text-gray-500 hover:text-[#653033]  "
                                   onClick={() => navClose()}
@@ -174,10 +175,36 @@ export default function NavbarMain() {
                                 >
                                   Reviews
                                 </Link>
+                                </li>
+                                
+                                <li className='flex flex-col columns-1 py-10 space-y-6'>
+                                <Link
+                                  onClick={() => navClose()}
+                                  href="/blog/home-inspections"
+                                  className=" items-center text-gray-500 hover:text-[#653033] "
+                                >
+                                  Home Inspections
+                                </Link>
+                                  <Link
+                                  onClick={() => navClose()}
+                                  href="/blog/pre-listing-inspections"
+                                  className=" items-center text-gray-500 hover:text-[#653033] "
+                                >
+                                  Pre-Listing Inspections
+                                </Link>
+                                <Link
+                                  onClick={() => navClose()}
+                                  href="/blog/commercial-inspections"
+                                  className=" items-center text-gray-500 hover:text-[#653033] "
+                                >
+                                  Commercial Inspections
+                                </Link>
+                                </li>
+                                
 
                                 <a
                                   href="tel:3374995872"
-                                  className="border-[#653033] border duration-300 p-3 text-center rounded-lg h-fit text-[#653033]"
+                                  className="bg-[#653033] text-white border duration-300 p-3 text-center rounded-lg h-fit"
                                 >
                                   Schedule An Inspection
                                 </a>
