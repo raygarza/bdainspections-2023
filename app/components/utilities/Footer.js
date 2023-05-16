@@ -1,3 +1,7 @@
+import Link from "next/link";
+import logo from "../../../public/img/brand/bda-logolight.svg";
+import Image from "next/image";
+
 const navigation = {
   main: [
     { name: "Blog", href: "#" },
@@ -36,12 +40,17 @@ const navigation = {
   ],
 };
 
-export default function Example() {
+export default function Footer() {
   return (
     <footer className="bg-white">
       <div className="mx-auto max-w-[100rem] overflow-hidden sm:px-6 py-20 sm:py-16 lg:px-8">
+        <Link href="/">
+          <div className="flex space-x-2 mb-6 items-center px-3">
+            <Image src={logo} width={80} />
+          </div>
+        </Link>
         <nav
-          className="-mb-6 columns-1 px-6 sm:px-0 sm:flex sm:justify-center sm:space-x-12"
+          className="-mb-6 columns-1 px-3 sm:px-0 sm:flex sm:justify-center sm:space-x-12"
           aria-label="Footer"
         >
           {navigation.main.map((item) => (
@@ -55,7 +64,7 @@ export default function Example() {
             </div>
           ))}
         </nav>
-        <div className="mt-10 flex sm:justify-center px-6 sm:px-0  space-x-10">
+        <div className="mt-10 flex sm:justify-center px-3 sm:px-0  space-x-10">
           {navigation.social.map((item) => (
             <a
               key={item.name}

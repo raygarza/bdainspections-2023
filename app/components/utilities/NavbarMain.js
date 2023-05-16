@@ -68,30 +68,13 @@ export default function NavbarMain() {
             >
               Blog
             </Link>
-
-            <a
-              onClick={() => (smoothscroll("cities"), navClose())}
-              href="#cities"
+            <Link
+              href="/blog"
               className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-[#653033] "
+              onClick={() => navClose()}
             >
-              About
-            </a>
-
-            <a
-              onClick={() => (smoothscroll("customerservice"), navClose())}
-              href="#customerservice"
-              className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-[#653033] "
-            >
-              Team
-            </a>
-
-            <a
-              onClick={() => (smoothscroll("services"), navClose())}
-              href="#services"
-              className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-[#653033] "
-            >
-              Services
-            </a>
+              Reviews
+            </Link>
 
             <a
               href="tel:3374995872"
@@ -171,32 +154,26 @@ export default function NavbarMain() {
                             <div className="relative mt-6 flex-1 px-4 sm:px-6">
                               <ul className=" font-semibold space-y-10 text-xl flex flex-col columns-1">
                                 <Link
+                                  href="/"
+                                  className=" items-center text-gray-500 hover:text-[#653033]  "
+                                  onClick={() => navClose()}
+                                >
+                                  Home
+                                </Link>
+                                <Link
+                                  onClick={() => navClose()}
                                   href="/blog"
                                   className=" items-center text-gray-500 hover:text-[#653033] "
                                 >
                                   Blog
                                 </Link>
-
-                                <a
-                                  href="#cities"
+                                <Link
+                                  onClick={() => navClose()}
+                                  href="/reviews"
                                   className=" items-center text-gray-500 hover:text-[#653033] "
                                 >
-                                  About
-                                </a>
-
-                                <a
-                                  href="#customerservice"
-                                  className=" items-center text-gray-500 hover:text-[#653033] "
-                                >
-                                  Team
-                                </a>
-
-                                <a
-                                  href="#services"
-                                  className=" items-center text-gray-500 hover:text-[#653033] "
-                                >
-                                  Services
-                                </a>
+                                  Reviews
+                                </Link>
 
                                 <a
                                   href="tel:3374995872"
