@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function GreenReviews() {
   return (
-    <section className=" bg-gradient-to-br from-[#434639] to-[#4d5142] py-24 sm:py-24">
+    <section className=" bg-gradient-to-br from-[#34362c] to-[#434639] py-24 sm:py-24">
       <div className="mx-auto max-w-[100rem] px-6 lg:px-16 ">
         <div className="mx-auto grid max-w-2xl grid-cols-1 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col pb-10 sm:pb-16 lg:pb-0 lg:pr-8 xl:pr-20">

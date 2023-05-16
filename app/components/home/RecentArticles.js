@@ -23,7 +23,7 @@ export default async function RecentArticles() {
       <div>
         {/* Recent articles */}
         <div className="mx-auto max-w-[100rem]  px-6 lg:px-16 font-semibold py-10">
-          <h1 className="text-xl sm:text-xl font-bold tracking-tight text-gray-800 ">
+          <h1 className="text-xl sm:text-2xl  font-bold tracking-tight text-gray-800 ">
             Recent Articles
           </h1>
           <div className="py-1 bg-[#434639] w-20 mt-2 mb-6"></div>
@@ -33,7 +33,7 @@ export default async function RecentArticles() {
               return (
                 <div
                   key={article.id}
-                  className="col-span-3 h-fit sm:col-span-1 flex flex-col items-start justify-between ring-1 ring-gray-500/20 hover:opacity-90 duration-200 bg-white rounded-lg sm:rounded-2xl"
+                  className="col-span-3 h-fit sm:col-span-1 flex flex-col items-start justify-between ring-1 ring-gray-500/20 hover:ring-gray-500/40 hover:opacity-95 duration-200 bg-white rounded-lg sm:rounded-2xl"
                 >
                   <Link href={`/blog/${article.attributes.slug}`}>
                     {/* card thumbnail */}
@@ -108,7 +108,7 @@ export default async function RecentArticles() {
         </div>
         <div className="max-w-[100rem]  px-6 lg:px-16 pb-6 -mt-3 mx-auto">
           <Link href="/blog">
-            <div className="px-3 py-3 text-sm w-fit border bg-[#f1f1f1] rounded-lg hover:bg-[#e9e9e9] text-center">
+            <div className="mb-10 mt-4  w-fit shadow-md hover:opacity-95 hover:border-gray-500 rounded-xl font-semibold text-sm text-gray-700 px-6 py-4 bg-white  cursor-pointer border duration-200">
               View All Articles
             </div>
           </Link>

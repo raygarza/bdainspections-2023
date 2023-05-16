@@ -4,6 +4,7 @@ import CustomerService from "./components/home/CustomerService";
 import Services from "./components/home/Services";
 import GreenReviews from "./components/home/GreenReviews";
 import RecentArticles from "./components/home/RecentArticles";
+import ServiceArea from "./components/home/ServiceArea";
 
 export default function Homepage() {
   return (
@@ -13,9 +14,11 @@ export default function Homepage() {
       </div>
 
       <RecentArticles />
-      {/* <Services/> */}
       <GreenReviews />
       <CustomerService />
+      <Services/>
+      <ServiceArea />
+
     </main>
   );
 }

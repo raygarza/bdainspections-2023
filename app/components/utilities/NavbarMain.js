@@ -69,7 +69,7 @@ export default function NavbarMain() {
               Blog
             </Link>
             <Link
-              href="/blog"
+              href="/reviews"
               className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-[#653033] "
               onClick={() => navClose()}
             >
