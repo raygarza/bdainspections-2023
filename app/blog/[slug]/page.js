@@ -168,8 +168,7 @@ export default async function SingleArticle({ params }) {
                     <div className="relative w-full hidden sm:block">
                       <img
                         src={
-                          article.attributes.thumbnail?.data.attributes.formats
-                            .medium.url
+                          article.attributes.thumbnail?.data.attributes.url
                         }
                         alt="image"
                         className="aspect-[16/9] w-full rounded-t-lg sm:rounded-t-2xl bg-gray-100 object-cover "

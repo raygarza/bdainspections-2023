@@ -91,12 +91,62 @@ const testimonials = [
   },
   {
     id: 10,
-    body: 'bodytext',
+    body: 'Chris did a great job.  Very detailed.  Took the time to make sure we understood all the issues.   Highly recommend him.',
     author: {
-      name: 'LeslieAlexander',
+      name: 'Greg LeJune',
       service: 'Home Inspection',
       imageUrl:
-        'imageurl',
+        'https://lh3.googleusercontent.com/a/AGNmyxYelYss83lg70rZxNUpKuWeWvB9RFqB9GPE7PqN=w90-h90-p-rp-mo-br100',
+    },
+  },
+  {
+    id: 11,
+    body: 'David Marcantel was great! He explained everything and was very detailed. I feel comfortable purchasing that home. Thank you!',
+    author: {
+      name: 'Tanya Brewster',
+      service: 'Home Inspection',
+      imageUrl:
+        'https://lh3.googleusercontent.com/a/AGNmyxa3ROVuJwukdSXaJcULBh13-gW0d3Df5u1rQ3Cn=w90-h90-p-rp-mo-br100',
+    },
+  },
+  {
+    id: 12,
+    body: 'This is absolutely a 5 star company and I appreciate them! They will literally inspect down to the screws!! Definitely my go to!',
+    author: {
+      name: 'Demi S.',
+      service: 'Home Inspection',
+      imageUrl:
+        'https://lh3.googleusercontent.com/a-/ACB-R5Q-3zliXUlghzhGbKA2Wugd5ZdpGSg2p1k_ywXRsw=w90-h90-p-rp-mo-br100',
+    },
+  },
+  {
+    id: 13,
+    body: 'this is my second time using BDA, absolutely cannot RAVE enough about them. David was so thorough and knowledgeable about the house, was able to hit all the big points efficiently since I was on a tight schedule, and made sure if I had any questions that they were answered. Because of a deadline mixup, I had called right before close, and they were able to squeeze us in the next morning. Thank you so much for being available last minute!',
+    author: {
+      name: 'Cheyanne Murphy',
+      service: 'Home Inspection',
+      imageUrl:
+        "https://lh3.googleusercontent.com/a-/ACB-R5R3dUJfCJpaXolQTBd-D67l2YKgZUzVzjHnhIupzA=w90-h90-p-rp-mo-br100",
+    },
+  },
+  {
+    id: 14,
+    body: 'Very pleasant experience! He went through the walk through in great detail and made sure we understood everything!',
+    author: {
+      name: 'Jada Benoit',
+      service: 'Home Inspection',
+      imageUrl:
+        'https://lh3.googleusercontent.com/a/AGNmyxZS8sZxat7vcx12IaYj4Fvt8Vj5S34UgilSbws6=w90-h90-p-rp-mo-br100',
+    },
+  },
+  {
+    id: 15,
+    body: "Chris was easy to work with and gave detailed report,  then followed up to make sure we didn't have any questions.  Very thorough in inspection and like that he is a Christian, makes the trust in his work easier.Also, LeAnn helped with scheduling and was super quick to respond and made sure to fill in the gaps. Thanks!",
+    author: {
+      name: 'Joe Palmer',
+      service: 'Home Inspection',
+      imageUrl:
+        'https://lh3.googleusercontent.com/a-/ACB-R5SdAsXhNy0jAomDnb7yIKVJOAQ6EL72qhWFyvwI=w90-h90-p-rp-mo-ba4-br100',
     },
   },
   // More testimonials...
@@ -104,15 +154,16 @@ const testimonials = [
 
 export default function Reviews() {
   return (
-    <div className=" py-24 sm:py-10">
+    <div className=" py-10 sm:py-10">
       <div className="max-w-[100rem] px-6 lg:px-8">
-        <div className="mx-auto max-w-xl text-center">
-          <h2 className="text-lg font-semibold leading-8 tracking-tight text-[#653033]">Testimonials</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            We have worked with hundreds of amazing clients.
+        <div className="mx-auto max-w-xl text-left sm:text-center">
+          <h2 className="text-base sm:text-lg  font-semibold leading-8 tracking-tight text-[#653033]">Testimonials</h2>
+          <p className="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 ">
+            We've Worked With Hundreds of Amazing Clients Over The Years
           </p>
+          <p className='my-2 sm:text-center'><span className='sm:hidden'>Client Success Stories: </span>Discover What Our Clients Have to Say About Their Experience</p>
         </div>
-        <div className="mx-auto mt-16 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">
+        <div className="mx-auto mt-4 flow-root max-w-2xl sm:mt-20 lg:mx-0 lg:max-w-none">
           <div className="-mt-8 sm:-mx-4 sm:columns-2 sm:text-[0] lg:columns-3">
             {testimonials.map((testimonial) => (
               <div key={testimonial.author.service} className="pt-8  sm:inline-block hover:opacity-95 hover:scale-[1.01] duration-200 sm:w-full sm:px-4">
@@ -132,7 +183,7 @@ export default function Reviews() {
             ))}
           </div>
         </div>
-        <div className='my-10 sm:text-center w-fit m-auto shadow-lg hover:opacity-95 hover:px-[2.15rem] rounded-xl font-semibold text-gray-700 px-8 py-6 bg-white  cursor-pointer border duration-200'>
+        <div className='my-10 text-center w-full sm:w-fit m-auto shadow-lg hover:opacity-95 hover:px-[2.15rem] rounded-xl font-semibold text-gray-700 px-8 py-6 bg-white  cursor-pointer border duration-200'>
             <a href="https://www.google.com/search?q=bda+inspections+lake+charles&rlz=1C1ONGR_enUS1056US1056&oq=bda+inspections+lake+charles&aqs=chrome.0.0i512j0i390i395l3j69i60l3.10546j1j7&sourceid=chrome&ie=UTF-8#lrd=0x863b85cdf6ce6fcb:0xe33c02a68fb90b54,1,,,," target="_blank">See more Reviews on Google</a>
         </div>
       </div>

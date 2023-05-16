@@ -29,7 +29,7 @@ export default function NavbarDrop() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/residential-inspections"
+                  href="/blog/residential-inspections"
                   className={classNames(
                     active ? "bg-gray-100 text-gray-900" : "text-gray-700",
                     "block px-4 py-2 text-sm",
@@ -42,7 +42,7 @@ export default function NavbarDrop() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/commercial-inspections"
+                  href="/blog/commercial-inspections"
                   className={classNames(
                     active ? "bg-gray-100 text-gray-900" : "text-gray-700",
                     "block px-4 py-2 text-sm",
@@ -55,7 +55,7 @@ export default function NavbarDrop() {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href="/pre-listing-inspections"
+                  href="/blog/pre-listing-inspections"
                   className={classNames(
                     active ? "bg-gray-100 text-gray-900" : "text-gray-700",
                     "block px-4 py-2 text-sm",

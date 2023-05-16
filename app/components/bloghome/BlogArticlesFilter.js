@@ -44,14 +44,14 @@ export default async function BlogArticlesFilter() {
 
   return (
     <div className="grid grid-cols-8 m-auto sm:py-10 sm:space-x-6">
-      <div className="col-span-8 lg:col-span-2">
+      <div className="col-span-8 hidden lg:col-span-2">
         <div className=" hidden lg:block bg-white rounded-lg sm:rounded-xl divide-y-2 shadow-lg space-y-2 p-6 sticky top-10">
           <div className="text-2xl font-bold text-gray-900 ">Filter By</div>
           <div className="pt-4">
             <div className="font-bold pb-2.5">Topic</div>
             <fieldset className="">
               <legend className="sr-only">Category</legend>
-              <div className="space-y-2">
+              <div className="space-y-2 hidden">
                 <div className="flex items-center">
                   <input
                     id={1000}
@@ -66,7 +66,6 @@ export default async function BlogArticlesFilter() {
                 </div>
                 {/* Mapping through Categories  */}
                 {categories.data.map((category) => {
-                  // console.log(category.attributes.title)
                   return (
                     <div key={category.id} className="flex items-center">
                       <input
@@ -89,7 +88,7 @@ export default async function BlogArticlesFilter() {
           </div>
         </div>
       </div>
-      <div className="col-span-8 lg:col-span-6">
+      <div className="col-span-8 lg:col-span-8">
         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="pb-6 ">
             <h1 className="text-2xl lg:text-2xl pb-1 font-bold lg:font-extrabold">

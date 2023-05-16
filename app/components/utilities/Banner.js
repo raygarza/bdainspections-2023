@@ -4,7 +4,7 @@ import { PhoneIcon } from '@heroicons/react/20/solid';
 const navigation = [
 	{
 	  name: 'Facebook',
-	  href: '#',
+	  href: 'https://www.facebook.com/lakecharleshomeinspections',
 	  icon: (props) => (
 		<svg fill="currentColor" viewBox="0 0 24 24" {...props}>
 		  <path
@@ -17,7 +17,7 @@ const navigation = [
 	},
 	{
 	  name: 'Instagram',
-	  href: '#',
+	  href: 'https://www.instagram.com/bda_inspections',
 	  icon: (props) => (
 		<svg fill="currentColor" viewBox="0 0 24 24" {...props}>
 		  <path
@@ -70,20 +70,19 @@ export default function Banner() {
 	return (
 		<div className='bg-[#434639]'>
 			
-			<div className="mx-auto max-w-[100rem] px-6 py-3 md:flex md:items-center md:justify-between lg:px-8">
+			<div className="mx-auto max-w-[100rem] px-6 py-4 md:flex md:items-center md:justify-between lg:px-8">
 				<div className="flex sm:justify-center space-x-4 md:order-2">
 				{navigation.map((item) => (
 					<a key={item.name} href={item.href} className="text-white hover:text-white">
 					<span className="sr-only">{item.name}</span>
-					<item.icon className="h-5 w-5" aria-hidden="true" />
+					<item.icon className="h-6 w-6" aria-hidden="true" />
 					</a>
 				))}
 				</div>
 				<div className="hidden sm:flex mt-8 md:order-1 space-x-2 md:mt-0 items-center text-white text-xs"> 
 				<p className=' font-semibold'>Proudly Serving Lake Charles, La</p>
-				<p className='px-3 '>-</p>
-				<p className="text-center font-semibold leading-5 ">Call Us
-				</p>< PhoneIcon className='h-3 w-3 ' />
+				<p className='px-3 '>|</p>
+				<p className="text-center font-semibold leading-5 ">Call us at</p><a href="tel:3374995872" className='font-semibold'> 337-499-5872</a>
 				</div>
 			</div>
 			

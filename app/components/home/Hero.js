@@ -20,7 +20,7 @@ export default function Hero() {
      <div className="mx-auto max-w-2xl sm:-mt-10   lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 items-center lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
        
        <div className="max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
-        <HeroPill className='mb-6' title="BDA Inspections" href="/contact"/>
+        <HeroPill className='mb-6' title="BDA Inspections"/>
           <p className="max-w-2xl sm:max-w-3xl text-[1.6rem] lg:text-3xl 2xl:text-4xl pt-4 font-bold sm:font-bold leading-tight sm:leading-[3rem]  text-gray-800 lg:col-span-2 xl:col-auto"> 
           Your Go-To Home Inspection  <br className='hidden sm:block' />Service In <span className='font-extrabold text-[#653033]'>Lake Charles, La</span>
         </p>
