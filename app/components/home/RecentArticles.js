@@ -21,8 +21,12 @@ export default async function RecentArticles() {
       {/* Recent articles and other section */}
       <div>
         {/* Recent articles */}
-        <div className="max-w-4xl 2xl:max-w-7xl px-6 mx-auto font-semibold py-10">
-          <h1 className="text-xl pb-4">Recent Articles</h1>
+        <div className="mx-auto max-w-[100rem]  px-6 lg:px-16 font-semibold py-10">
+          <h1 className="text-xl sm:text-xl font-bold tracking-tight text-gray-800 ">
+            Recent Articles
+          </h1>
+          <div className="py-1 bg-[#434639] w-20 mt-2 mb-6"></div>
+
           <div className="grid grid-cols-3 gap-x-4 space-y-4 sm:space-y-0 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
             {articles.data.map((article) => {
               return (
@@ -102,10 +106,10 @@ export default async function RecentArticles() {
             })}
           </div>
         </div>
-        <div className="max-w-4xl 2xl:max-w-7xl px-6 pb-6 -mt-3 mx-auto">
+        <div className="max-w-[100rem]  px-6 lg:px-16 pb-6 -mt-3 mx-auto">
           <Link href="/blog">
             <div className="px-3 py-3 text-sm w-fit border bg-[#f1f1f1] rounded-lg hover:bg-[#e9e9e9] text-center">
-              Back to Blog
+              View All Articles
             </div>
           </Link>
         </div>
