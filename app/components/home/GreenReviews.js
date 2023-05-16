@@ -3,32 +3,17 @@ import Image from "next/image";
 
 export default function GreenReviews() {
   return (
-    <section className=" bg-gradient-to-br from-[#4c4f41] to-[#6a6f5b] py-24 sm:py-24">
+    <section className=" bg-gradient-to-br from-[#434639] to-[#4d5142] py-24 sm:py-24">
       <div className="mx-auto max-w-[100rem] px-6 lg:px-16 ">
         <div className="mx-auto grid max-w-2xl grid-cols-1 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col pb-10 sm:pb-16 lg:pb-0 lg:pr-8 xl:pr-20">
             <p className="sr-only">5 out of 5 stars</p>
             <div className="flex gap-x-1 text-[#e8f2c6]">
-              <StarIcon
-                className="h-5 w-5 shadow-lg flex-none"
-                aria-hidden="true"
-              />
-              <StarIcon
-                className="h-5 w-5 shadow-lg flex-none"
-                aria-hidden="true"
-              />
-              <StarIcon
-                className="h-5 w-5 shadow-lg flex-none"
-                aria-hidden="true"
-              />
-              <StarIcon
-                className="h-5 w-5 shadow-lg flex-none"
-                aria-hidden="true"
-              />
-              <StarIcon
-                className="h-5 w-5 shadow-lg flex-none"
-                aria-hidden="true"
-              />
+              <StarIcon className="h-5 w-5 flex-none" aria-hidden="true" />
+              <StarIcon className="h-5 w-5 flex-none" aria-hidden="true" />
+              <StarIcon className="h-5 w-5 flex-none" aria-hidden="true" />
+              <StarIcon className="h-5 w-5 flex-none" aria-hidden="true" />
+              <StarIcon className="h-5 w-5 flex-none" aria-hidden="true" />
             </div>
             <div className="font-bold text-sm mt-2 text-white">
               Positive:{" "}
@@ -71,26 +56,11 @@ export default function GreenReviews() {
           <div className="flex flex-col border-t border-white/10 pt-10 sm:pt-16 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0 xl:pl-20">
             <p className="sr-only">5 out of 5 stars</p>
             <div className="flex gap-x-1 text-[#e8f2c6]">
-              <StarIcon
-                className="h-5 w-5 shadow-lg flex-none"
-                aria-hidden="true"
-              />
-              <StarIcon
-                className="h-5 w-5 shadow-lg flex-none"
-                aria-hidden="true"
-              />
-              <StarIcon
-                className="h-5 w-5 shadow-lg flex-none"
-                aria-hidden="true"
-              />
-              <StarIcon
-                className="h-5 w-5 shadow-lg flex-none"
-                aria-hidden="true"
-              />
-              <StarIcon
-                className="h-5 w-5 shadow-lg flex-none"
-                aria-hidden="true"
-              />
+              <StarIcon className="h-5 w-5 flex-none" aria-hidden="true" />
+              <StarIcon className="h-5 w-5 flex-none" aria-hidden="true" />
+              <StarIcon className="h-5 w-5 flex-none" aria-hidden="true" />
+              <StarIcon className="h-5 w-5 flex-none" aria-hidden="true" />
+              <StarIcon className="h-5 w-5 flex-none" aria-hidden="true" />
             </div>
             <div className="font-bold text-sm mt-2 text-white">
               Positive:{" "}

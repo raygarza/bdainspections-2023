@@ -4,11 +4,9 @@ import Image from "next/image";
 
 const navigation = {
   main: [
-    { name: "Blog", href: "#" },
-    { name: "About", href: "#" },
-    { name: "Team", href: "#" },
-    { name: "Services", href: "#" },
-    { name: "Book an Appointment", href: "#" },
+    { name: "Blog", href: "/blog" },
+    { name: "About", href: "/reviews" },
+    { name: "Book an Appointment", href: "tel:3374995872" },
   ],
   social: [
     {
@@ -43,10 +41,10 @@ const navigation = {
 export default function Footer() {
   return (
     <footer className="bg-white">
-      <div className="mx-auto max-w-[100rem] overflow-hidden sm:px-6 py-20 sm:py-16 lg:px-8">
+      <div className="mx-auto max-w-[100rem] overflow-hidden sm:px-6 py-8 sm:py-16 lg:px-8">
         <Link href="/">
-          <div className="flex space-x-2 mb-6 items-center px-3">
-            <Image src={logo} width={80} />
+          <div className="flex space-x-2 mb-6 sm:justify-center items-center px-2">
+            <Image src={logo} width={100} />
           </div>
         </Link>
         <nav
