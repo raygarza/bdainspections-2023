@@ -68,6 +68,7 @@ export default function NavbarMain() {
             >
               Blog
             </Link>
+            <NavbarDrop />
             <Link
               href="/reviews"
               className="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-500 hover:text-[#653033] "
@@ -75,7 +76,7 @@ export default function NavbarMain() {
             >
               Reviews
             </Link>
-            <NavbarDrop />
+            
             {/* <a
               href="tel:3374995872"
               className="inline-flex items-center   text-sm font-medium border-[#653033] border duration-300 p-3  rounded-lg h-fit text-[#653033]"
