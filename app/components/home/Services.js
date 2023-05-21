@@ -18,7 +18,7 @@ const services = [
     "id": "3",
     title: "Pre-Listing Inspections",
     description: "We provide a thorough inspection of the home and provide a detailed report of our findings.",
-    href: "pre-listing-inspections",
+    slug: "pre-listing-inspections",
   }
 ]
 
