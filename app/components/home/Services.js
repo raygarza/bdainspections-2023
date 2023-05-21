@@ -6,19 +6,19 @@ const services = [
     "id": "1",
     title: "Residential Inspections",
     description: "We provide a thorough inspection of the home and provide a detailed report of our findings.",
-    slug: "home-inspection",
+    slug: "residential-inspections",
   },
   {
     "id": "2",
     title: "Commercial Inspections",
     description: "We provide a thorough inspection of the home and provide a detailed report of our findings.",
-    slug: "commercial-inspection",
+    slug: "commercial-inspections",
   },
   {
     "id": "3",
     title: "Pre-Listing Inspections",
     description: "We provide a thorough inspection of the home and provide a detailed report of our findings.",
-    href: "pre-listing-inspection",
+    href: "pre-listing-inspections",
   }
 ]
 
