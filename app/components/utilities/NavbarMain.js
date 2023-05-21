@@ -77,12 +77,12 @@ export default function NavbarMain() {
               Reviews
             </Link>
             
-            {/* <a
+            <a
               href="tel:3374995872"
               className="inline-flex items-center   text-sm font-medium border-[#653033] border duration-300 p-3  rounded-lg h-fit text-[#653033]"
             >
               <span>Schedule An Inspection</span>
-            </a> */}
+            </a>
           </div>
 
           {/* Mobile buttons */}
