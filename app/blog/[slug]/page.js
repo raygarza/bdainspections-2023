@@ -50,13 +50,13 @@ export default async function SingleArticle({ params }) {
             <ol role="list" className="flex items-center space-x-2">
               <li>
                 <div>
-                  <a href="/" className="text-gray-600 hover:text-gray-800">
+                  <Link href="/" className="text-gray-600 hover:text-gray-800">
                     <HomeIcon
                       className="h-5 w-5 flex-shrink-0"
                       aria-hidden="true"
                     />
                     <span className="sr-only">Home</span>
-                  </a>
+                  </Link>
                 </div>
               </li>
               {pages.map((page) => (
