@@ -181,7 +181,7 @@ export default function NavbarMain() {
                                 <li className='flex flex-col columns-1 py-10 space-y-6'>
                                 <Link
                                   onClick={() => navClose()}
-                                  href="/blog/home-inspections"
+                                  href="/blog/residential-inspections"
                                   className=" items-center text-gray-500 hover:text-[#653033] "
                                 >
                                   Home Inspections
