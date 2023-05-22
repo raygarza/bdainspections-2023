@@ -44,7 +44,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[100rem] overflow-hidden sm:px-6 py-8 sm:py-16 lg:px-8">
         <Link href="/">
           <div className="flex space-x-2 mb-6 sm:justify-center items-center px-2">
-            <Image src={logo} width={100} />
+            <Image src={logo} width={100} alt="footer-logo"/>
           </div>
         </Link>
         <nav
