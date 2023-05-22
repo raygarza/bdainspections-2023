@@ -47,7 +47,7 @@ export default function NavbarMain() {
             <div className="flex space-x-4 items-center">
               <Link href="/">
                 <div className="flex space-x-2 items-center">
-                  <Image src={logo} width={80} />
+                  <Image src={logo} width={80} alt="logo" />
                   <div>|</div>
 
                   <div className="my-auto font-semibold text-lg sm:text-xl">
@@ -128,7 +128,7 @@ export default function NavbarMain() {
                                 <Dialog.Title className="text-base font-semibold my-8 leading-6 text-gray-900">
                                   <Link href="/">
                                     <div className="flex space-x-2 items-center">
-                                      <Image src={logo} width={80} />
+                                      <Image src={logo} width={80} alt="logo"/>
                                       <div>|</div>
 
                                       <div className="my-auto font-semibold text-lg sm:text-xl">
