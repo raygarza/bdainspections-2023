@@ -159,7 +159,7 @@ export default function Reviews() {
         <div className="mx-auto max-w-xl text-left sm:text-center">
           <h2 className="text-base sm:text-lg  font-semibold leading-8 tracking-tight text-[#653033]">Testimonials</h2>
           <p className="mt-2 text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 ">
-            We've Worked With Hundreds of Amazing Clients Over The Years
+            We've Worked With <span className='font-black'>Thousands</span> of Amazing Clients Over The Years
           </p>
           <p className='my-2 sm:text-center'><span className='sm:hidden'>Client Success Stories: </span>Discover What Our Clients Have to Say About Their Experience</p>
         </div>
