@@ -3,6 +3,7 @@ import NavbarMain from './components/utilities/NavbarMain';
 import Footer from './components/utilities/Footer';
 import Banner from './components/utilities/Banner';
 import AlertBanner from './components/utilities/AlertBanner';
+import {Analytics} from '@vercel/analytics/react'
 
 export const metadata = {
 	title: "BDA Inspections | Lake Charles",
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
          
 				</div>
 				{children}
+				<Analytics />
 				<div className='bg-white border-t '>
 					<div className='mx-auto max-w-7xl px-6 pb-8 py-6'>
 						<Footer />
