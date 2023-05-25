@@ -82,7 +82,7 @@ export default function Banner() {
 				<div className="hidden sm:flex mt-8 md:order-1 space-x-2 md:mt-0 items-center text-white text-xs"> 
 				<p className=' font-semibold'>Proudly Serving Lake Charles, La</p>
 				<p className='px-3 '>|</p>
-				<p className="text-center font-semibold leading-5 ">Call us at</p><a href="tel:3374995872" className='font-semibold'> 337-499-5872</a>
+				<p className="text-center font-semibold leading-5 ">Call us at</p><a href="tel:3373486937" className='font-semibold'> 337-348-6937</a>
 				</div>
 			</div>
 			

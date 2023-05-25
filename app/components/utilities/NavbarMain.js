@@ -78,7 +78,7 @@ export default function NavbarMain() {
             </Link>
             
             <a
-              href="tel:3374995872"
+              href="tel:3373486937"
               className="inline-flex items-center   text-sm font-medium border-[#653033] border duration-300 p-3  rounded-lg h-fit text-[#653033]"
             >
               <span>Schedule An Inspection</span>
@@ -204,7 +204,7 @@ export default function NavbarMain() {
                                 
 
                                 <a
-                                  href="tel:3374995872"
+                                  href="tel:3373486937"
                                   className="bg-[#653033] text-white border duration-300 p-3 text-center rounded-lg h-fit"
                                 >
                                   Schedule An Inspection
