@@ -16,10 +16,10 @@ export default async function RecentArticles() {
   const articlesData = getArticles();
   const [articlesArray] = await Promise.all([articlesData]);
 
-  let length = articlesArray.data.length;
+  // let length = articlesArray.data.length;
 
 
-  const articles = articlesArray.data.slice(length - 3, length);
+  const articles = articlesArray.data.slice(5 - 3, 5);
 
 
   return (
