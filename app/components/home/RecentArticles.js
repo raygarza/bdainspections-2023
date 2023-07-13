@@ -13,7 +13,7 @@ async function getArticles() {
 }
 
 export default async function RecentArticles() {
-  const articlesData = getArticles().reverse();
+  const articlesData = getArticles();
   const [articlesArray] = await Promise.all([articlesData]);
   const articles = articlesArray.data;
 
@@ -30,7 +30,7 @@ export default async function RecentArticles() {
           <div className="py-1 bg-[#434639] w-20 mt-2 mb-6"></div>
 
           <div className="grid grid-cols-3 gap-x-4 space-y-4 sm:space-y-0 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
-            {articles.slice(0,3).map((article) => {
+            {articles.slice(-3,-1).map((article) => {
               return (
                 <div
                   key={article.id}
