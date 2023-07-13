@@ -15,7 +15,7 @@ async function getArticles() {
 export default async function RecentArticles() {
   const articlesData = getArticles();
   const [articlesArray] = await Promise.all([articlesData]);
-  const articles = articlesArray.data.reverse().splice(3,100);
+  const articles = articlesArray.data.reverse().slice(0,3);
 
 
   return (
