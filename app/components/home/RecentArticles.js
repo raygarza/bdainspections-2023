@@ -15,7 +15,7 @@ async function getArticles() {
 export default async function RecentArticles() {
   const articlesData = getArticles();
   const [articlesArray] = await Promise.all([articlesData]);
-  const articles = articlesArray.data.slice(-4, -1);
+  const articles = articlesArray.data.slice(-3);
 
 
   return (
