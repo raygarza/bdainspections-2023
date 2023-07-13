@@ -19,8 +19,10 @@ export default async function RecentArticles() {
   // let length = articlesArray.data.length;
 
   reverseArticles = articlesArray.data.reverse();
-  const articles = reverseArticles.slice(-4,-1);
+  console.log("Reverse Articles", reverseArticles)
+  const articles = reverseArticles.slice(0, 3);
 
+  console.log("Articles", articles)
 
   return (
     <div>
