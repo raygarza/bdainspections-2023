@@ -116,7 +116,7 @@ export default async function BlogArticlesFilter() {
           </div>
 
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-4 gap-y-6 lg:mx-0 lg:max-w-none lg:grid-cols-3 ">
-            {articles.data?.map((article) => {
+            {articles.data?.reverse().map((article) => {
               return (
                 <div
                   key={article.id}
